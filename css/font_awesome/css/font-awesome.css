@@ -3643,8 +3643,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: normal;
-  src: url("/css/font_awesome/fonts/fa-brands-400.eot?__=e8019d5");
-  src: url("/css/font_awesome/fonts/fa-brands-400.eot?__=e8019d5&#iefix") format("embedded-opentype"), url("/css/font_awesome/fonts/fa-brands-400.woff2?__=6814d0e") format("woff2"), url("/css/font_awesome/fonts/fa-brands-400.woff?__=da40823") format("woff"), url("/css/font_awesome/fonts/fa-brands-400.ttf?__=fdf44bc") format("truetype"), url("/css/font_awesome/fonts/fa-brands-400.svg?__=f79929b#fontawesome") format("svg"); }
+  src: url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.eot?__=1559562988461");
+  src: url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.eot?__=1559562988461&#iefix") format("embedded-opentype"), url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.woff2?__=1559562988461") format("woff2"), url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.woff?__=1559562988461") format("woff"), url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.ttf?__=1559562988461") format("truetype"), url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.svg?__=1559562988461#fontawesome") format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands'; }
@@ -3652,8 +3652,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 400;
-  src: url("/css/font_awesome/fonts/fa-regular-400.eot?__=e6c93cb");
-  src: url("/css/font_awesome/fonts/fa-regular-400.eot?__=e6c93cb&#iefix") format("embedded-opentype"), url("/css/font_awesome/fonts/fa-regular-400.woff2?__=8d9ab84") format("woff2"), url("/css/font_awesome/fonts/fa-regular-400.woff?__=dad9063") format("woff"), url("/css/font_awesome/fonts/fa-regular-400.ttf?__=8d220c7") format("truetype"), url("/css/font_awesome/fonts/fa-regular-400.svg?__=cd17140#fontawesome") format("svg"); }
+  src: url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.eot?__=1559562988461");
+  src: url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.eot?__=1559562988461&#iefix") format("embedded-opentype"), url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.woff2?__=1559562988461") format("woff2"), url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.woff?__=1559562988461") format("woff"), url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.ttf?__=1559562988461") format("truetype"), url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.svg?__=1559562988461#fontawesome") format("svg"); }
 
 .far {
   font-family: 'Font Awesome 5 Free';
@@ -3662,8 +3662,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 900;
-  src: url("/css/font_awesome/fonts/fa-solid-900.eot?__=ea363ed");
-  src: url("/css/font_awesome/fonts/fa-solid-900.eot?__=ea363ed&#iefix") format("embedded-opentype"), url("/css/font_awesome/fonts/fa-solid-900.woff2?__=b75b4bf") format("woff2"), url("/css/font_awesome/fonts/fa-solid-900.woff?__=2d0415f") format("woff"), url("/css/font_awesome/fonts/fa-solid-900.ttf?__=132e975") format("truetype"), url("/css/font_awesome/fonts/fa-solid-900.svg?__=61f3dc5#fontawesome") format("svg"); }
+  src: url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.eot?__=1559562988461");
+  src: url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.eot?__=1559562988461&#iefix") format("embedded-opentype"), url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.woff2?__=1559562988461") format("woff2"), url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.woff?__=1559562988461") format("woff"), url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.ttf?__=1559562988461") format("truetype"), url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.svg?__=1559562988461#fontawesome") format("svg"); }
 
 .fa,
 .fas {

@@ -1,8 +1,8 @@
 /*! onsenui - v2.10.8 - 2019-04-01 */
-@import url("/css/ionicons/css/ionicons.min.css?__=fd56be2");
-@import url("/css/material-design-iconic-font/css/material-design-iconic-font.min.css?__=5329db4");
-@import url("/css/font_awesome/css/font-awesome.min.css?__=75ec517");
-@import url("/css/font_awesome/css/v4-shims.min.css?__=0fe05e6");
+@import url("/sanlinDist/css/ionicons/css/ionicons.min.css?__=1559562988461");
+@import url("/sanlinDist/css/material-design-iconic-font/css/material-design-iconic-font.min.css?__=1559562988461");
+@import url("/sanlinDist/css/font_awesome/css/font-awesome.min.css?__=1559562988461");
+@import url("/sanlinDist/css/font_awesome/css/v4-shims.min.css?__=1559562988461");
 
 ons-page, ons-navigator,
 ons-tabbar,
