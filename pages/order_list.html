@@ -1,0 +1,184 @@
+<ons-page>
+	
+<ons-toolbar>
+	<div class="left">
+		<ons-back-button>返回</ons-back-button>
+	</div>
+	<div class="center">订单列表</div>
+	<div class="right">
+		<ons-icon id="icoSearch" icon="fa-search"></ons-icon>
+	</div>
+</ons-toolbar>
+
+<ons-tabbar swipeable position="top" tab-border>
+	<ons-tab page="tab1.html" label="待处理" active></ons-tab>
+	<ons-tab page="tab2.html" label="已处理"></ons-tab>
+</ons-tabbar>
+
+
+<template id="tab1.html">
+	<ons-page id="Tab1">
+		<ons-list class="my-10">
+			<ons-list-item modifier="chevron" tappable>
+				<div class="left"><span class="font-16">代理商</span></div>
+				<div class="right"><span id="pickAgent" class="font-16 text-gray">请选择</span></div>
+			</ons-list-item>
+		</ons-list>
+
+		<ons-list class="my-10">
+			<ons-list-item modifier="longdivider">
+				<label class="left">
+					<ons-checkbox input-id="check-1" modifier="material" value="something"></ons-checkbox>
+				</label>
+				<label for="check-1" class="center font-16">
+					单号：201905190426
+				</label>
+			</ons-list-item>
+			<ons-list-item class="listBody" data-id="333" tappable modifier="longdivider">
+				<div class="list-item__subtitle">On the Internet</div>
+				<div class="list-item__subtitle">
+					<span class="mx-10 fl-right">2019/05/19</span>
+					On the Internet you can refresh the previous page using one of these
+				</div>
+			</ons-list-item>
+		</ons-list>
+
+		<ons-list class="my-10">
+			<ons-list-item modifier="longdivider">
+				<label class="left">
+					<ons-checkbox input-id="check-2" modifier="material" value="something"></ons-checkbox>
+				</label>
+				<label for="check-2" class="center font-16">
+					单号：201905040117
+				</label>
+			</ons-list-item>
+			<ons-list-item class="listBody" data-id="333" tappable modifier="longdivider">
+				<div class="list-item__subtitle">On the Internet</div>
+				<div class="list-item__subtitle">
+					<span class="mx-10 fl-right">2019/05/19</span>
+					On the Internet you can refresh the previous page using one of these
+				</div>
+			</ons-list-item>
+		</ons-list>
+
+		<ons-list class="my-10">
+			<ons-list-item modifier="longdivider">
+				<label class="left">
+					<ons-checkbox input-id="check-3" modifier="material" value="something"></ons-checkbox>
+				</label>
+				<label for="check-3" class="center font-16">
+					单号：201905190426
+				</label>
+			</ons-list-item>
+			<ons-list-item class="listBody" data-id="333" tappable modifier="longdivider">
+				<div class="list-item__subtitle">On the Internet</div>
+				<div class="list-item__subtitle">
+					<span class="mx-10 fl-right">2019/05/19</span>
+					On the Internet you can refresh the previous page using one of these
+				</div>
+			</ons-list-item>
+		</ons-list>
+
+		<ons-list class="my-10">
+			<ons-list-item modifier="longdivider">
+				<label class="left">
+					<ons-checkbox input-id="check-4" modifier="material" value="something"></ons-checkbox>
+				</label>
+				<label for="check-4" class="center font-16">
+					单号：201905190426
+				</label>
+			</ons-list-item>
+			<ons-list-item class="listBody" data-id="333" tappable modifier="longdivider">
+				<div class="list-item__subtitle">On the Internet</div>
+				<div class="list-item__subtitle">
+					<span class="mx-10 fl-right">2019/05/19</span>
+					On the Internet you can refresh the previous page using one of these
+				</div>
+			</ons-list-item>
+		</ons-list>
+
+		<style>
+			.btmButton {
+				width: 130px;
+				text-align: center;
+				border-radius: 0;
+				font-size: 20px;
+			}
+		</style>
+		<ons-bottom-toolbar>
+			<label class="font-16" style="display: inline-block; margin: 10px 15px ;">
+				<ons-checkbox
+					input-id="check-all"
+					modifier="material"
+					value="something"
+					style="vertical-align: baseline; margin-right: 6px;"
+				></ons-checkbox>
+				全选
+			</label>
+
+			<div class="fl-right" style="height: 100%; width:260px; display: flex;">
+				<ons-button class="btmButton">审批</ons-button>
+				<ons-button class="btmButton" modifier=" outline">取消审批</ons-button>
+			</div>
+		</ons-bottom-toolbar>
+	</ons-page>
+</template>
+
+<template id="tab2.html">
+	<ons-page id="Tab2">
+		<p style="text-align: center;">
+			This is the second page.
+		</p>
+	</ons-page>
+</template>
+
+<ons-modal id="mdLoading" direction="up">
+	<div style="text-align: center">
+		<p><ons-icon icon="md-spinner" size="28px" spin></ons-icon> Loading...</p>
+	</div>
+</ons-modal>
+
+
+    <script>ons.getScriptPage().onInit = function () {
+    console.log(router.topPage.data);
+    ons.preload('/pages/order_detail.html');
+    const loadingModal = document.getElementById('mdLoading');
+    loadingModal.show();
+    setTimeout(function () {
+        loadingModal.hide();
+    }, 1000);
+    let fired = false;
+    $(this)
+        .on('click', '.listBody', function () {
+        router.pushPage('/pages/order_detail.html', {
+            data: { id: this.getAttribute('data-id') },
+            animation: 'slide'
+        });
+    })
+        .on('show', function () {
+        if (!fired) {
+            fired = true;
+            $('#check-all').syncCheckBoxGroup(':checkbox', '#Tab1');
+            $('#icoSearch').on('click', function () {
+                router.pushPage('/pages/search.html', {
+                    animation: 'slide'
+                });
+            });
+            var nameEl = document.getElementById('pickAgent');
+            var years = [];
+            var picker = new Picker({
+                data: [years],
+                selectedIndex: [0],
+                title: '选择代理商'
+            });
+            picker.on('picker.select', function (selectedVal, selectedIndex) {
+                nameEl.innerText = years[selectedIndex[0]].text;
+            });
+            nameEl.addEventListener('click', function () {
+                picker.show();
+            });
+        }
+    });
+};
+</script><!--ignore-->
+</ons-page>

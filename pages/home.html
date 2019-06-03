@@ -1,0 +1,101 @@
+<ons-page>
+	
+<style>
+	.toolbar {
+		padding: 0 12px;
+	}
+	#imgLogoS {
+		width: 18vw;
+	}
+	#icoUser {
+		width: 5vw;
+		vertical-align: middle;
+	}
+	.toolbar .right {
+		font-size: 14px;
+	}
+</style>
+
+<ons-toolbar>
+	<div class="left"><img src="/img/logo_s.png?__=e779861" id="imgLogoS" /></div>
+	<div class="center">首页</div>
+	<div class="right">
+		<ons-icon icon="fa-user-circle" style="color:#aaa;" size="18px"></ons-icon> 阿布才
+	</div>
+</ons-toolbar>
+
+<style>
+	.card {
+		margin: 20px;
+	}
+	.divCard {
+		font-size: 30px;
+		line-height: 60px;
+		padding: 10px;
+	}
+	.divCard > .notification {
+		float: right;
+		margin-top: 20px;
+		background-color: #ee1a26 !important;
+	}
+	.imgLead {
+		width: 60px;
+		height: 60px;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+</style>
+
+<ons-card data-to="/pages/special_price_list.html">
+	<ons-ripple color="#eee" background="#ddd"></ons-ripple>
+	<div class="divCard">
+		<img src="/img/tejiadan.png?__=e2b4cb9" class="imgLead" />
+		特价单
+		<span class="notification">1</span>
+	</div>
+</ons-card>
+
+
+<ons-card data-to="/pages/special_price_list.html">
+	<ons-ripple color="#eee" background="#ddd"></ons-ripple>
+	<div class="divCard">
+		<img src="/img/sso.png?__=f86a4b7" class="imgLead" />
+		SSO特价单
+		<span class="notification">21</span>
+	</div>
+</ons-card>
+
+
+
+<ons-card data-to="/pages/order_list.html">
+	<ons-ripple color="#eee" background="#ddd"></ons-ripple>
+	<div class="divCard">
+		<img src="/img/dingdan.png?__=86f28a9" class="imgLead" />
+		订单
+		<span class="notification">8</span>
+	</div>
+</ons-card>
+
+
+
+<ons-card data-to="/pages/special_price_list.html">
+	<ons-ripple color="#eee" background="#ddd"></ons-ripple>
+	<div class="divCard">
+		<img src="/img/kehudingdan.png?__=081c396" class="imgLead" />
+		客户折扣
+		<span class="notification">2</span>
+	</div>
+</ons-card>
+
+
+
+
+
+    <script>ons.getScriptPage().onInit = function () {
+    $('body').on('click', 'ons-card', function () {
+        const pageUrl = this.getAttribute('data-to');
+        router.pushPage(pageUrl, { data: { count: 3 }, animation: 'slide' });
+    });
+};
+</script><!--ignore-->
+</ons-page>

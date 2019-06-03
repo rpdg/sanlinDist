@@ -1,0 +1,96 @@
+<ons-page>
+	
+<ons-toolbar>
+	<div class="left">
+		<ons-back-button>返回</ons-back-button>
+	</div>
+	<div class="center">订单明细</div>
+</ons-toolbar>
+
+<style>
+	.divProf {
+		width: 100%;
+		line-height: 2em;
+	}
+</style>
+<ons-list>
+	<ons-list-item modifier="longdivider">
+		<ons-icon icon="fa-list-alt" style="color:#ee1a26;" class="mr-10"></ons-icon>
+		<span class="font-16">Apple x</span>
+	</ons-list-item>
+	<ons-list-item class="pr-10 font-16" modifier="longdivider">
+		<div class="divProf">
+			<span class="fl-left text-gray">一级代理商：</span> <span class="fl-right">On the Internet</span>
+		</div>
+		<div class="divProf">
+			<span class="fl-left text-gray">客户名称：</span> <span class="fl-right">On the Internet</span>
+		</div>
+		<div class="divProf">
+			<span class="fl-left text-gray">项目总价：</span> <span class="fl-right">On the Internet</span>
+		</div>
+	</ons-list-item>
+</ons-list>
+
+<ons-list class="my-10">
+	<ons-list-item modifier="chevron" tappable>
+		<div class="left"><span class="font-16 text-gray">类型</span></div>
+		<div class="right"><span id="pickType" class="font-16">普通订单</span></div>
+	</ons-list-item>
+</ons-list>
+
+<p class="font-16">
+	<b class="prefix"></b>产品明细
+</p>
+
+<div class="tb-wrapper">
+	<table class="tb">
+		<thead>
+			<tr>
+				<th>产品名称</th>
+				<th>面价</th>
+				<th>折扣</th>
+				<th>折扣金额</th>
+				<th>操作说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>a</td>
+				<td>2019/05/19</td>
+				<td>v</td>
+				<td>b</td>
+				<td>q</td>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>d</td>
+				<td>v</td>
+				<td>b</td>
+				<td>q</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+
+<style>
+	.btmButton {
+		flex-grow: 1;
+		text-align: center;
+		border-radius: 0;
+		font-size: 20px;
+	}
+</style>
+<ons-bottom-toolbar>
+	<div style="height: 100%;  display: flex;">
+		<ons-button class="btmButton">审批</ons-button>
+		<ons-button class="btmButton" modifier=" outline">拒绝</ons-button>
+	</div>
+</ons-bottom-toolbar>
+
+    <script>ons.getScriptPage().onInit = function () {
+    console.log(router.topPage.data, this);
+};
+</script><!--ignore-->
+</ons-page>

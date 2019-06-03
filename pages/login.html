@@ -1,0 +1,152 @@
+<ons-page>
+	
+<style>
+	.page__content {
+		background-image: url('/img/bg.jpg?__=8ebaf3a') !important;
+		background-size: 100% 100% !important;
+		background-attachment: fixed !important;
+	}
+
+	#imgLoginLogo {
+		display: block;
+		width: 131.25px;
+		height: 138.75px;
+		margin: 50px auto 20px;
+	}
+
+	/* Clearable text inputs */
+	.clearable {
+		position: relative;
+		display: inline-block;
+	}
+	.clearable input {
+		color: #1f1f21;
+		padding-right: 24px;
+		width: 70vw;
+		box-sizing: border-box;
+		height: 44px;
+		line-height: 44px;
+		text-indent: 32px;
+		font-size: 16px;
+		font-weight: 400;
+		border-radius: 6px;
+		border-style: solid;
+		border-color: transparent;
+		border-width: 2px;
+		padding: 0 5px;
+	}
+	.clearable input:focus {
+		border-color: #e01c34;
+	}
+
+	.input_icon {
+		color: #bbb;
+		position: absolute;
+		top: 9px;
+		left: 6px;
+	}
+
+	.input_icon.focus {
+		color: #e01c34;
+	}
+
+	.clearable input:focus > .input_icon {
+		color: #e01c34;
+	}
+
+	.clearable__clear {
+		display: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 10px;
+		padding: 0 8px;
+		user-select: none;
+		cursor: pointer;
+	}
+
+	#btnLogin{
+		width: 70vw; 
+		margin: 0 auto;
+		/* background-color: #e01c34; */
+	}
+</style>
+
+<div class="text-center" style="margin-top: 20px">
+	<h2 class="text-center" style="font-weight: bold;">登 录</h2>
+
+	<img src="/img/logo.png?__=a2992a1" id="imgLoginLogo" />
+
+	<p>
+		<span class="clearable">
+			<ons-icon icon="fa-user" class="input_icon" fixed-width="true"></ons-icon>
+			<input type="text" id="username" value="" placeholder="Username" />
+			<ons-icon
+				class="clearable__clear"
+				icon="fa-times-circle"
+				style="color: #bbb;"
+				fixed-width="true"
+			></ons-icon>
+		</span>
+	</p>
+
+	<p>
+		<span class="clearable">
+			<ons-icon icon="fa-lock" class="input_icon" fixed-width="true"></ons-icon>
+			<input type="password" id="password" value="" placeholder="Password" />
+			<ons-icon
+				class="clearable__clear"
+				icon="fa-times-circle"
+				style="color: #bbb;"
+				fixed-width="true"
+			></ons-icon>
+		</span>
+	</p>
+
+		<ons-button id="btnLogin" modifier="large" ripple>登 录</ons-button>
+</div>
+
+
+    <script>const page = ons.getScriptPage();
+page.onDestroy = function () {
+    $('.clearable').each(function () {
+        var $inp = $(this).find('input'), $cle = $(this).find('.clearable__clear');
+        $inp.off('input blur focus');
+        $cle.off('touchstart click');
+    });
+    $('#btnLogin').off('click');
+};
+page.onInit = function () {
+    $('.clearable').each(function () {
+        var $inp = $(this).find('input'), $cle = $(this).find('.clearable__clear');
+        $inp.on('input', function () {
+            $cle.toggle(!!this.value);
+        })
+            .on('blur', function () {
+            $cle.hide();
+            $inp.prev().removeClass('focus');
+        })
+            .on('focus', function () {
+            $cle.toggle(!!this.value);
+            $inp.prev().addClass('focus');
+        });
+        $cle.on('touchstart click', function (e) {
+            e.preventDefault();
+            $inp.val('').trigger('input');
+        });
+    });
+    $('#btnLogin').on('click', function () {
+        const username = document.querySelector('#username').value;
+        const password = document.querySelector('#password').value;
+        if (username === '1' && password === '1') {
+            router.resetToPage('/pages/home.html', { animation: 'fade' });
+            Store.set('authenzation', { username });
+        }
+        else {
+            ons.notification.alert('Wrong username/password combination');
+        }
+    });
+};
+const login = 'aaaa';
+</script><!--ignore-->
+</ons-page>

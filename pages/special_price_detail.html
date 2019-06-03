@@ -1,0 +1,27 @@
+<ons-page>
+	
+<ons-toolbar>
+	<div class="left">
+		<ons-back-button>返回</ons-back-button>
+	</div>
+	<div class="center">1.1</div>
+</ons-toolbar>
+
+<ons-list style="margin: 10px 0;">
+	<ons-list-item modifier="longdivider">
+		<ons-icon icon="fa-list-alt" style="color:#ee1a26;" class="mr-10"></ons-icon>
+			Apple x
+	</ons-list-item>
+	<ons-list-item class="listBody" data-id="333" tappable modifier="longdivider">
+		<div class="list-item__subtitle">On the Internet</div>
+		<div class="list-item__subtitle">On the Internet</div>
+	</ons-list-item>
+</ons-list>
+
+
+
+    <script>ons.getScriptPage().onInit = function () {
+    console.log(router.topPage.data, this);
+};
+</script><!--ignore-->
+</ons-page>
