@@ -7,18 +7,19 @@
 			content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"
 		/>
 		<title>demo</title>
-		<link rel="stylesheet" href="/sanlinDist/css/onsenui.css?__=1559564653371" />
-		<link rel="stylesheet" href="/sanlinDist/css/onsen-css-components.min.css?__=1559564653371" />
-		<script src="/sanlinDist/lib/onsenui.min.js?__=1559564653371"></script>
+		<link rel="stylesheet" href="/sanlinDist/css/onsenui.css?__=1559565219177" />
+		<link rel="stylesheet" href="/sanlinDist/css/onsen-css-components.min.css?__=1559565219177" />
+		<script src="/sanlinDist/lib/onsenui.min.js?__=1559565219177"></script>
 		<script>
 			ons.platform.select('ios');
-			history.pushState(null, null, document.URL); 
-			window.addEventListener('popstate', function () { 
-				history.pushState(null, null, document.URL); 
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
 			});
 		</script>
 		<style>
-			html, body {
+			html,
+			body {
 				font-size: 20px;
 				height: 100%;
 			}
@@ -138,9 +139,9 @@
 	<body>
 		<ons-navigator id="appNavigator"></ons-navigator>
 
-		<script src="/sanlinDist/lib/jquery-3.4.1.min.js?__=1559564653371"></script>
-		<script src="/sanlinDist/lib/picker.min.js?__=1559564653371"></script>
-		<script src="/sanlinDist/lib/utils.js?__=1559564653371"></script>
+		<script src="/sanlinDist/lib/jquery-3.4.1.min.js?__=1559565219177"></script>
+		<script src="/sanlinDist/lib/picker.min.js?__=1559565219177"></script>
+		<script src="/sanlinDist/lib/utils.js?__=1559565219177"></script>
 		<script>
 			// ons.OnsNavigatorElement;
 			const router = document.querySelector('#appNavigator');
@@ -148,11 +149,13 @@
 			ons.ready(function() {
 				if (Store.get('authenzation')) {
 					router.resetToPage('./pages/home.html');
-				} else {
+				} 
+				else {
 					router.resetToPage('./pages/login.html');
-
 					ons.preload('./pages/home.html');
 				}
+
+				ons.preload(['./pages/order_list.html', './pages/search.html'])
 
 				/* document.addEventListener('init', function(event) {
 					console.log('This is a lifecycle event!', event.target);
