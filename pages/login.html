@@ -2,7 +2,7 @@
 	
 <style>
 	.page__content {
-		background-image: url('/sanlinDist/img/bg.jpg?__=1559562988461') !important;
+		background-image: url('/sanlinDist/img/bg.jpg?__=1559564320779') !important;
 		background-size: 100% 100% !important;
 		background-attachment: fixed !important;
 	}
@@ -75,7 +75,7 @@
 <div class="text-center" style="margin-top: 20px">
 	<h2 class="text-center" style="font-weight: bold;">登 录</h2>
 
-	<img src="/sanlinDist/img/logo.png?__=1559562988461" id="imgLoginLogo" />
+	<img src="/sanlinDist/img/logo.png?__=1559564320779" id="imgLoginLogo" />
 
 	<p>
 		<span class="clearable">
@@ -138,8 +138,8 @@ page.onInit = function () {
     $('#btnLogin').on('click', function () {
         const username = document.querySelector('#username').value;
         const password = document.querySelector('#password').value;
-        if (username === '1' && password === '1') {
-            router.resetToPage('/pages/home.html', { animation: 'fade' });
+        if (username === 'a' && password === '1') {
+            router.resetToPage('./pages/home.html', { animation: 'fade' });
             Store.set('authenzation', { username });
         }
         else {

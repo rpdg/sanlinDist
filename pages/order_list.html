@@ -141,7 +141,7 @@
 
     <script>ons.getScriptPage().onInit = function () {
     console.log(router.topPage.data);
-    ons.preload('/pages/order_detail.html');
+    ons.preload('./pages/order_detail.html');
     const loadingModal = document.getElementById('mdLoading');
     loadingModal.show();
     setTimeout(function () {
@@ -150,7 +150,7 @@
     let fired = false;
     $(this)
         .on('click', '.listBody', function () {
-        router.pushPage('/pages/order_detail.html', {
+        router.pushPage('./pages/order_detail.html', {
             data: { id: this.getAttribute('data-id') },
             animation: 'slide'
         });

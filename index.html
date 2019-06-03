@@ -7,9 +7,9 @@
 			content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"
 		/>
 		<title>demo</title>
-		<link rel="stylesheet" href="/sanlinDist/css/onsenui.css?__=1559562988461" />
-		<link rel="stylesheet" href="/sanlinDist/css/onsen-css-components.min.css?__=1559562988461" />
-		<script src="/sanlinDist/lib/onsenui.min.js?__=1559562988461"></script>
+		<link rel="stylesheet" href="/sanlinDist/css/onsenui.css?__=1559564320779" />
+		<link rel="stylesheet" href="/sanlinDist/css/onsen-css-components.min.css?__=1559564320779" />
+		<script src="/sanlinDist/lib/onsenui.min.js?__=1559564320779"></script>
 		<script>
 			ons.platform.select('ios');
 			history.pushState(null, null, document.URL); 
@@ -138,20 +138,20 @@
 	<body>
 		<ons-navigator id="appNavigator"></ons-navigator>
 
-		<script src="/sanlinDist/lib/jquery-3.4.1.min.js?__=1559562988461"></script>
-		<script src="/sanlinDist/lib/picker.min.js?__=1559562988461"></script>
-		<script src="/sanlinDist/lib/utils.js?__=1559562988461"></script>
+		<script src="/sanlinDist/lib/jquery-3.4.1.min.js?__=1559564320779"></script>
+		<script src="/sanlinDist/lib/picker.min.js?__=1559564320779"></script>
+		<script src="/sanlinDist/lib/utils.js?__=1559564320779"></script>
 		<script>
 			// ons.OnsNavigatorElement;
 			const router = document.querySelector('#appNavigator');
 
 			ons.ready(function() {
 				if (Store.get('authenzation')) {
-					router.resetToPage('/pages/home.html');
+					router.resetToPage('./pages/home.html');
 				} else {
-					router.resetToPage('/pages/login.html');
+					router.resetToPage('./pages/login.html');
 
-					ons.preload('/pages/home.html');
+					ons.preload('./pages/home.html');
 				}
 
 				/* document.addEventListener('init', function(event) {

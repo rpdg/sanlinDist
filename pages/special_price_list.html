@@ -64,7 +64,7 @@
         loadingModal.hide();
     }, 2000);
     $(this).on('click', '.listBody', function () {
-        router.pushPage('/pages/special_price_detail.html', {
+        router.pushPage('./pages/special_price_detail.html', {
             data: { id: this.getAttribute('data-id') },
             animation: 'slide'
         });

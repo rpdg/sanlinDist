@@ -3643,8 +3643,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: normal;
-  src: url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.eot?__=1559562988461");
-  src: url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.eot?__=1559562988461&#iefix") format("embedded-opentype"), url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.woff2?__=1559562988461") format("woff2"), url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.woff?__=1559562988461") format("woff"), url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.ttf?__=1559562988461") format("truetype"), url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.svg?__=1559562988461#fontawesome") format("svg"); }
+  src: url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.eot?__=1559564320779");
+  src: url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.eot?__=1559564320779&#iefix") format("embedded-opentype"), url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.woff2?__=1559564320779") format("woff2"), url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.woff?__=1559564320779") format("woff"), url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.ttf?__=1559564320779") format("truetype"), url("/sanlinDist/css/font_awesome/fonts/fa-brands-400.svg?__=1559564320779#fontawesome") format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands'; }
@@ -3652,8 +3652,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 400;
-  src: url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.eot?__=1559562988461");
-  src: url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.eot?__=1559562988461&#iefix") format("embedded-opentype"), url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.woff2?__=1559562988461") format("woff2"), url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.woff?__=1559562988461") format("woff"), url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.ttf?__=1559562988461") format("truetype"), url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.svg?__=1559562988461#fontawesome") format("svg"); }
+  src: url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.eot?__=1559564320779");
+  src: url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.eot?__=1559564320779&#iefix") format("embedded-opentype"), url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.woff2?__=1559564320779") format("woff2"), url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.woff?__=1559564320779") format("woff"), url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.ttf?__=1559564320779") format("truetype"), url("/sanlinDist/css/font_awesome/fonts/fa-regular-400.svg?__=1559564320779#fontawesome") format("svg"); }
 
 .far {
   font-family: 'Font Awesome 5 Free';
@@ -3662,8 +3662,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 900;
-  src: url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.eot?__=1559562988461");
-  src: url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.eot?__=1559562988461&#iefix") format("embedded-opentype"), url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.woff2?__=1559562988461") format("woff2"), url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.woff?__=1559562988461") format("woff"), url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.ttf?__=1559562988461") format("truetype"), url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.svg?__=1559562988461#fontawesome") format("svg"); }
+  src: url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.eot?__=1559564320779");
+  src: url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.eot?__=1559564320779&#iefix") format("embedded-opentype"), url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.woff2?__=1559564320779") format("woff2"), url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.woff?__=1559564320779") format("woff"), url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.ttf?__=1559564320779") format("truetype"), url("/sanlinDist/css/font_awesome/fonts/fa-solid-900.svg?__=1559564320779#fontawesome") format("svg"); }
 
 .fa,
 .fas {
