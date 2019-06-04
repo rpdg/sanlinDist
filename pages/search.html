@@ -10,23 +10,23 @@
 <ons-list style="margin: 10px 0 ;">
 	<ons-list-item modifier="longdivider chevron" tappable>
 		<div class="left"><span class="font-16">代理商</span></div>
-		<div class="right"><span id="pickEndDate" class="font-16 text-gray">请选择代理商</span></div>
+		<div class="right"><span id="" class="font-16 text-gray">请选择代理商</span></div>
 	</ons-list-item>
 	<ons-list-item modifier="longdivider chevron" tappable>
 		<div class="left"><span class="font-16">客户</span></div>
-		<div class="right"><span id="pickEndDate" class="font-16 text-gray">请选择客户</span></div>
+		<div class="right"><span id="" class="font-16 text-gray">请选择客户</span></div>
 	</ons-list-item>
 	<ons-list-item modifier="longdivider chevron" tappable>
 		<div class="left"><span class="font-16">类型</span></div>
-		<div class="right"><span id="pickEndDate" class="font-16 text-gray">请选择类型</span></div>
+		<div class="right"><span id="" class="font-16 text-gray">请选择类型</span></div>
 	</ons-list-item>
 	<ons-list-item modifier="longdivider chevron" tappable>
 		<div class="left"><span class="font-16">状态</span></div>
-		<div class="right"><span id="pickEndDate" class="font-16 text-gray">请选择状态</span></div>
+		<div class="right"><span id="" class="font-16 text-gray">请选择状态</span></div>
 	</ons-list-item>
-	<ons-list-item modifier="longdivider chevron" tappable>
+	<ons-list-item id="pickStartDate" modifier="longdivider chevron" tappable>
 		<div class="left"><span class="font-16">开始时间</span></div>
-		<div class="right"><span id="pickType" class="font-16 text-gray">请选择开始时间</span></div>
+		<div class="right font-16"><span class="text-gray">请选择开始时间</span></div>
 	</ons-list-item>
 	<ons-list-item modifier="longdivider chevron" tappable>
 		<div class="left"><span class="font-16">结束时间</span></div>
@@ -49,7 +49,7 @@
         if (!fired) {
             fired = true;
             $('#check-all').syncCheckBoxGroup(':checkbox', '#Tab1');
-            var nameEl = document.getElementById('pickType');
+            var nameEl = document.getElementById('pickStartDate');
             function range(n, m, surfix = '') {
                 let arr = [];
                 for (let i = n; i <= m; i++) {
@@ -86,12 +86,7 @@
                 title: '日期'
             });
             picker.on('picker.select', function (selectedVal, selectedIndex) {
-                nameEl.innerText =
-                    years[selectedIndex[0]].text +
-                        '/' +
-                        months[selectedIndex[1]].text +
-                        '/' +
-                        days[selectedIndex[2]].text;
+                $('.right', nameEl).text(years[selectedIndex[0]].text + '/' + months[selectedIndex[1]].text + '/' + days[selectedIndex[2]].text);
             });
             picker.on('picker.change', function (index, selectedIndex) {
                 console.log(index, selectedIndex, picker.selectedIndex);
