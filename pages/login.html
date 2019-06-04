@@ -2,7 +2,7 @@
 	
 <style>
 	.page__content {
-		background-image: url('/sanlinDist/img/bg.jpg?__=1559652450229') !important;
+		background-image: url('/sanlinDist/img/bg.jpg?__=1559656146872') !important;
 		background-size: 100% 100% !important;
 		background-attachment: fixed !important;
 	}
@@ -116,7 +116,7 @@
 	font-size:14px;
 	margin: auto 0.5em 0 0;
 }
-#my-alert-dialog ons-list-item > .right.checked::after{
+#my-alert-dialog ons-list-item.checked > .right::after{
 	content: "\f00c";
 	font-family: 'Font Awesome 5 Brands', 'Font Awesome 5 Free';
 	font-size:14px;
@@ -225,6 +225,9 @@ page.onInit = function () {
         dialog.show();
         $('#icoClose').one('click', function () {
             dialog.hide();
+        });
+        $(dialog).on('click', 'ons-list-item', function () {
+            $(this).addClass('checked').siblings().removeClass('checked');
         });
     });
 };
