@@ -2,7 +2,7 @@
 	
 <style>
 	.page__content {
-		background-image: url('/sanlinDist/img/bg.jpg?__=1559651414656') !important;
+		background-image: url('/sanlinDist/img/bg.jpg?__=1559652450229') !important;
 		background-size: 100% 100% !important;
 		background-attachment: fixed !important;
 	}
@@ -111,10 +111,17 @@
 	overflow-y: scroll !important;
 	background: #fff !important;
 }
-.boxIcon{
+#my-alert-dialog .boxIcon{
 	color: #bbb; 
 	font-size:14px;
-	margin: auto 0.5em;
+	margin: auto 0.5em 0 0;
+}
+#my-alert-dialog ons-list-item > .right.checked::after{
+	content: "\f00c";
+	font-family: 'Font Awesome 5 Brands', 'Font Awesome 5 Free';
+	font-size:14px;
+	font-weight: 900;
+	color: #ed1b24;
 }
 </style>
 <template id="alert-dialog.html">
@@ -130,13 +137,39 @@
 				<ons-list>
 					<ons-list-item modifier="longdivider" tappable>
 						<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
-						<span class="font-14">MASPSTO</span>
+						<span class="font-14">MASPSTO -1</span>
+						<div class="right checked"></div>
+					</ons-list-item>
+					<ons-list-item modifier="longdivider" tappable>
+						<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
+						<span class="font-14">MASPSTO -2</span>
+						<div class="right"></div>
+					</ons-list-item>
+					<ons-list-item modifier="longdivider" tappable>
+						<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
+						<span class="font-14">MASPSTO -3</span>
+						<div class="right"></div>
+					</ons-list-item>
+					<ons-list-item modifier="longdivider" tappable>
+						<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
+						<span class="font-14">MASPSTO -4</span>
+						<div class="right"></div>
+					</ons-list-item>
+					<ons-list-item modifier="longdivider" tappable>
+						<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
+						<span class="font-14">MASPSTO -5</span>
+						<div class="right"></div>
+					</ons-list-item>
+					<ons-list-item modifier="longdivider" tappable>
+						<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
+						<span class="font-14">MASPSTO -6</span>
+						<div class="right"></div>
 					</ons-list-item>
 				</ons-list>
 			</div>
 
 			<ons-bottom-toolbar style="box-sizing: content-box; padding: 5px 20px;">
-				<ons-button modifier="large" ripple>登 录</ons-button>
+				<ons-button modifier="large" ripple>确认</ons-button>
 			</ons-bottom-toolbar>
 			
 			
