@@ -2,7 +2,7 @@
 	
 <style>
 	.page__content {
-		background-image: url('/sanlinDist/img/bg.jpg?__=1559650465587') !important;
+		background-image: url('/sanlinDist/img/bg.jpg?__=1559651414656') !important;
 		background-size: 100% 100% !important;
 		background-attachment: fixed !important;
 	}
@@ -108,36 +108,30 @@
 
 <style>
 #my-alert-dialog .page__content{
-	overflow-y: scroll;
+	overflow-y: scroll !important;
+	background: #fff !important;
+}
+.boxIcon{
+	color: #bbb; 
+	font-size:14px;
+	margin: auto 0.5em;
 }
 </style>
 <template id="alert-dialog.html">
 	<ons-dialog id="my-alert-dialog">
 		<ons-page>
 			<ons-toolbar style=" background-color: #ed1b24 ; color: #fff;">
-				<div class="center" style="color: #fff;">列表</div>
+				<div class="center" style="color: #fff;">请选择代理账号</div>
 				<div class="right">
 					<ons-icon id="icoClose" class="mr-10" icon="fa-close"></ons-icon>
 				</div>
 			</ons-toolbar>
 			<div style="overflow-y:scroll;">
 				<ons-list>
-					<ons-list-item modifier="longdivider" tappable>Item A</ons-list-item>
-					<ons-list-item modifier="longdivider">Item B</ons-list-item>
-					<ons-list-item modifier="longdivider">Item A</ons-list-item>
-					<ons-list-item modifier="longdivider">Item B</ons-list-item>
-					<ons-list-item modifier="longdivider">Item A</ons-list-item>
-					<ons-list-item modifier="longdivider">Item B</ons-list-item>
-					<ons-list-item modifier="longdivider">Item A</ons-list-item>
-					<ons-list-item modifier="longdivider">Item B</ons-list-item>
-					<ons-list-item modifier="longdivider">Item A</ons-list-item>
-					<ons-list-item modifier="longdivider">Item B</ons-list-item>
-					<ons-list-item modifier="longdivider">Item A</ons-list-item>
-					<ons-list-item modifier="longdivider">Item B</ons-list-item>
-					<ons-list-item modifier="longdivider">Item A</ons-list-item>
-					<ons-list-item modifier="longdivider">Item B</ons-list-item>
-					<ons-list-item modifier="longdivider">Item A</ons-list-item>
-					<ons-list-item modifier="longdivider">Item B</ons-list-item>
+					<ons-list-item modifier="longdivider" tappable>
+						<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
+						<span class="font-14">MASPSTO</span>
+					</ons-list-item>
 				</ons-list>
 			</div>
 
