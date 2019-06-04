@@ -7,12 +7,17 @@
 			content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"
 		/>
 		<title>demo</title>
-		<link rel="stylesheet" href="/sanlinDist/css/onsenui.css?__=1559567184326" />
-		<link rel="stylesheet" href="/sanlinDist/css/onsen-css-components.min.css?__=1559567184326" />
-		<link rel="preload" as="font" type="font/woff2" href="/sanlinDist/css/font_awesome/fonts/fa-brands-400.woff2?__=1559567184326" />
-		<link rel="preload" as="font" type="font/woff2" href="/sanlinDist/css/font_awesome/fonts/fa-solid-900.woff2?__=1559567184326" />
-		<link rel="preload" as="font" type="font/woff2" href="/sanlinDist/css/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2?__=1559567184326" />
-		<script src="/sanlinDist/lib/onsenui.min.js?__=1559567184326"></script>
+		<link rel="stylesheet" href="/sanlinDist/css/onsenui.css?__=1559617674103" />
+		<link rel="stylesheet" href="/sanlinDist/css/onsen-css-components.min.css?__=1559617674103" />
+		<link rel="preload" as="font" type="font/woff2" href="/sanlinDist/css/font_awesome/fonts/fa-brands-400.woff2?__=1559617674103" />
+		<link rel="preload" as="font" type="font/woff2" href="/sanlinDist/css/font_awesome/fonts/fa-solid-900.woff2?__=1559617674103" />
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff2"
+			href="/sanlinDist/css/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2?__=1559617674103"
+		/>
+		<script src="/sanlinDist/lib/onsenui.min.js?__=1559617674103"></script>
 		<script>
 			ons.platform.select('ios');
 			history.pushState(null, null, document.URL);
@@ -20,145 +25,99 @@
 				history.pushState(null, null, document.URL);
 			});
 		</script>
-		<style>
-			html,
-			body {
-				font-size: 20px;
-				height: 100%;
-			}
-			p {
-				margin: 12px 0;
-			}
+		
+		<style >html, body { font-size: 20px; height: 100%; }
 
-			.text-gray {
-				color: #888;
-			}
-			.text-white {
-				color: #fff;
-			}
-			.text-red {
-				color: #e01c34;
-			}
-			.fl-left {
-				float: left;
-			}
-			.fl-right {
-				float: right;
-			}
-			.font-14 {
-				font-size: 14px;
-			}
-			.font-16 {
-				font-size: 16px;
-			}
-			.pl-10 {
-				padding-left: 10px;
-			}
-			.pr-10 {
-				padding-right: 10px;
-			}
-			.px-10 {
-				padding-left: 10px;
-				padding-right: 10px;
-			}
-			.mt-10 {
-				margin-top: 10px;
-			}
-			.mb-10 {
-				margin-bottom: 10px;
-			}
-			.mr-10 {
-				margin-right: 10px;
-			}
-			.ml-10 {
-				margin-left: 10px;
-			}
-			.mx-10 {
-				margin-left: 10px;
-				margin-right: 10px;
-			}
-			.my-10 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-			}
-			.mx-auto {
-				margin-left: auto;
-				margin-right: auto;
-			}
-			.text-center {
-				text-align: center;
-			}
+p { margin: 12px 0; }
 
-			.prefix {
-				display: inline-block;
-				height: 0.8em;
-				margin: 0 0.6em;
-				border-left: 3px solid #e23;
-				vertical-align: middle;
-			}
+.text-gray { color: #888; }
 
-			ons-back-button svg {
-				height: 14px;
-			}
-			ons-back-button .back-button__label {
-				font-size: 14px;
-			}
+.text-white { color: #ffffff; }
 
-			.tb-wrapper {
-				width: 100%;
-				overflow-x: scroll;
-			}
-			.tb {
-				table-layout: fixed;
-				border: 1px solid #ddd;
-				border-collapse: collapse;
-			}
-			.tb > thead > tr {
-				background-color: #666;
-				color: #fff;
-			}
-			.tb > tbody > tr:nth-of-type(odd) {
-				background-color: #fff;
-			}
-			.tb > tbody > tr:nth-of-type(even) {
-				background-color: #f1f1f1;
-			}
-			.tb th,
-			.tb td {
-				font-size: 16px;
-				padding: 0.5em;
-				white-space: nowrap;
-				vertical-align: middle;
-				border: 1px solid #ddd;
-				font-weight: 300;
-				text-align: center;
-			}
-			.tb th {
-				padding: 0.5em 2em;
-				font-weight: normal;
-			}
-		</style>
+.text-red { color: #e01c34; }
+
+.fl-left { float: left; }
+
+.fl-right { float: right; }
+
+.font-14 { font-size: 14px; }
+
+.font-16 { font-size: 16px; }
+
+.pl-10 { padding-left: 10px; }
+
+.pr-10 { padding-right: 10px; }
+
+.px-10 { padding-left: 10px; padding-right: 10px; }
+
+.mt-10 { margin-top: 10px; }
+
+.mb-10 { margin-bottom: 10px; }
+
+.mr-10 { margin-right: 10px; }
+
+.ml-10 { margin-left: 10px; }
+
+.mx-10 { margin-left: 10px; margin-right: 10px; }
+
+.my-10 { margin-top: 10px; margin-bottom: 10px; }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.text-center { text-align: center; }
+
+.prefix { display: inline-block; height: 0.8em; margin: 0 0.6em; border-left: 3px solid #e01c34; vertical-align: middle; }
+
+ons-back-button svg { height: 14px; }
+
+ons-back-button .back-button__label { font-size: 14px; }
+
+/** 
+* table with scroll wrapper  
+*/
+.tb-wrapper { display: block; width: 100%; overflow-x: scroll; -webkit-overflow-x-scrolling: touch; -ms-overflow-x-style: none; -ms-scroll-snap-type: mandatory; }
+
+.tb-wrapper > .tb { table-layout: fixed; border: 1px solid #ddd; border-collapse: collapse; }
+
+.tb-wrapper > .tb > thead > tr { background-color: #888; color: #ffffff; }
+
+.tb-wrapper > .tb > tbody > tr:nth-of-type(odd) { background-color: #ffffff; }
+
+.tb-wrapper > .tb > tbody > tr:nth-of-type(even) { background-color: #f1f1f1; }
+
+.tb-wrapper > .tb th, .tb-wrapper > .tb td { font-size: 16px; padding: 0.5em; white-space: nowrap; vertical-align: middle; border: 1px solid #ddd; font-weight: 300; text-align: center; }
+
+.tb-wrapper > .tb th { padding: 0.5em 2em; font-weight: normal; }
+
+/*# sourceMappingURL=app.css.map?__=1559617674103 */</style>
 	</head>
 	<body>
 		<ons-navigator id="appNavigator"></ons-navigator>
 
-		<script src="/sanlinDist/lib/jquery-3.4.1.min.js?__=1559567184326"></script>
-		<script src="/sanlinDist/lib/picker.min.js?__=1559567184326"></script>
-		<script src="/sanlinDist/lib/utils.js?__=1559567184326"></script>
+		<script src="/sanlinDist/lib/jquery-3.4.1.min.js?__=1559617674103"></script>
+		<script src="/sanlinDist/lib/picker.min.js?__=1559617674103"></script>
+		<script src="/sanlinDist/lib/utils.js?__=1559617674103"></script>
 		<script>
 			// ons.OnsNavigatorElement;
-			const router = document.querySelector('#appNavigator');
+			const router = document.getElementById('appNavigator');
+			const currentUser = {} ;
 
 			ons.ready(function() {
-				if (Store.get('authenzation')) {
+				let user = Store.get('authenzation');
+				if (user) {
+					currentUser.userId = user.userId;
+					currentUser.userName = user.userName;
+					currentUser.loginName = user.loginName;
+
 					router.resetToPage('./pages/home.html');
 				} 
 				else {
 					router.resetToPage('./pages/login.html');
+
+					// optimize speed
 					ons.preload('./pages/home.html');
 				}
 
-				ons.preload(['./pages/order_list.html', './pages/search.html'])
 
 				/* document.addEventListener('init', function(event) {
 					console.log('This is a lifecycle event!', event.target);

@@ -2,7 +2,7 @@
 	
 <style>
 	.page__content {
-		background-image: url('/sanlinDist/img/bg.jpg?__=1559567184326') !important;
+		background-image: url('/sanlinDist/img/bg.jpg?__=1559617674103') !important;
 		background-size: 100% 100% !important;
 		background-attachment: fixed !important;
 	}
@@ -118,35 +118,37 @@ page.onDestroy = function () {
 };
 page.onInit = function () {
     $('.clearable').each(function () {
-        var $inp = $(this).find('input'), $cle = $(this).find('.clearable__clear');
-        $inp.on('input', function () {
-            $cle.toggle(!!this.value);
+        var $ipt = $(this).find('input'), $clearSignal = $(this).find('.clearable__clear');
+        $ipt.on('input', function () {
+            $clearSignal.toggle(!!this.value);
         })
             .on('blur', function () {
-            $cle.hide();
-            $inp.prev().removeClass('focus');
+            $clearSignal.hide();
+            $ipt.prev().removeClass('focus');
         })
             .on('focus', function () {
-            $cle.toggle(!!this.value);
-            $inp.prev().addClass('focus');
+            $clearSignal.toggle(!!this.value);
+            $ipt.prev().addClass('focus');
         });
-        $cle.on('touchstart click', function (e) {
+        $clearSignal.on('touchstart click', function (e) {
             e.preventDefault();
-            $inp.val('').trigger('input');
+            $ipt.val('').trigger('input');
         });
     });
     $('#btnLogin').on('click', function () {
         const username = document.querySelector('#username').value;
         const password = document.querySelector('#password').value;
         if (username === 'a' && password === '1') {
+            currentUser.loginName = username;
+            currentUser.userName = '阿律才';
+            currentUser.userId = 123456;
+            Store.set('authenzation', currentUser);
             router.resetToPage('./pages/home.html', { animation: 'fade' });
-            Store.set('authenzation', { username });
         }
         else {
             ons.notification.alert('Wrong username/password combination');
         }
     });
 };
-const login = 'aaaa';
 </script><!--ignore-->
 </ons-page>
