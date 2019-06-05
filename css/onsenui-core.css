@@ -276,10 +276,10 @@ ons-carousel[fullscreen] {
   overflow-y: auto;
 }
 
-@import url("/sanlinDist/css/ionicons/css/ionicons.min.css?__=1559657575918");
-@import url("/sanlinDist/css/material-design-iconic-font/css/material-design-iconic-font.min.css?__=1559657575918");
-@import url("/sanlinDist/css/font_awesome/css/font-awesome.min.css?__=1559657575918");
-@import url("/sanlinDist/css/font_awesome/css/v4-shims.min.css?__=1559657575918");
+@import url("/sanlinDist/css/ionicons/css/ionicons.min.css?__=3a43538");
+@import url("/sanlinDist/css/material-design-iconic-font/css/material-design-iconic-font.min.css?__=3635f88");
+@import url("/sanlinDist/css/font_awesome/css/font-awesome.min.css?__=78526be");
+@import url("/sanlinDist/css/font_awesome/css/v4-shims.min.css?__=4ee3c6f");
 
 ons-row {
   display: -webkit-box;
