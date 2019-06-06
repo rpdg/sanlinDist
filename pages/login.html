@@ -169,7 +169,7 @@
 			</div>
 
 			<ons-bottom-toolbar style="padding: 5px 20px;">
-				<ons-button modifier="large" style="line-height: 26px;" ripple>确认</ons-button>
+				<ons-button id="btnCheckAgent" modifier="large" style="line-height: 26px;" ripple>确认</ons-button>
 			</ons-bottom-toolbar>
 			
 			
@@ -223,7 +223,7 @@ page.onInit = function () {
     ons.createDialog('alert-dialog.html').then(function (dialog) {
         document.querySelector('.dialog-container').style.cssText += 'height: 350px;';
         dialog.show();
-        $('#icoClose').one('click', function () {
+        $('#icoClose,#btnCheckAgent').one('click', function () {
             dialog.hide();
         });
         $(dialog).on('click', 'ons-list-item', function () {
