@@ -4,8 +4,9 @@
 	<div class="left">
 		<ons-back-button>返回</ons-back-button>
 	</div>
-	<div class="center">订单明细</div>
+	<div class="center">特价单明细</div>
 </ons-toolbar>
+
 
 <style>
 	.divProf {
@@ -16,25 +17,21 @@
 <ons-list>
 	<ons-list-item modifier="longdivider">
 		<ons-icon icon="fa-list-alt" style="color:#ee1a26;" class="mr-10"></ons-icon>
-		<span class="font-16">单号：1234667</span>
+		<span class="font-16">单号：3466712</span>
 	</ons-list-item>
 	<ons-list-item class="pr-10 font-16" modifier="longdivider">
+		<div class="divProf">
+			<span class="fl-left text-gray">日期：</span> <span class="fl-right">2019-05-19</span>
+		</div>
 		<div class="divProf">
 			<span class="fl-left text-gray">一级代理商：</span> <span class="fl-right">On the Internet</span>
 		</div>
 		<div class="divProf">
-			<span class="fl-left text-gray">客户名称：</span> <span class="fl-right">On the Internet</span>
+			<span class="fl-left text-gray">二级代理商：</span> <span class="fl-right">On the Internet</span>
 		</div>
 		<div class="divProf">
-			<span class="fl-left text-gray">项目总价：</span> <span class="fl-right">On the Internet</span>
+			<span class="fl-left text-gray">客户名称：</span> <span class="fl-right">On the Internet</span>
 		</div>
-	</ons-list-item>
-</ons-list>
-
-<ons-list class="my-10">
-	<ons-list-item id="pickOrderType" modifier="chevron" tappable>
-		<div class="left"><span class="font-16 text-gray">类型</span></div>
-		<div class="right"><span id="pickType" class="font-16">普通订单</span></div>
 	</ons-list-item>
 </ons-list>
 
@@ -73,6 +70,48 @@
 </div>
 
 
+<p class="font-16">
+	<b class="prefix"></b>处理过程
+</p>
+
+<div class="tb-wrapper">
+	<table class="tb">
+		<thead>
+			<tr>
+				<th>操作人</th>
+				<th>操作时间</th>
+				<th>操作说明</th>
+				<th>审批</th>
+				<th>折扣金额</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>a</td>
+				<td>2019/05/19</td>
+				<td>v</td>
+				<td>b</td>
+				<td>q</td>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>d</td>
+				<td>v</td>
+				<td>b</td>
+				<td>q</td>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>2019/05/19</td>
+				<td>v</td>
+				<td>b</td>
+				<td>q</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
 
 <style>
 	.btmButton {
@@ -89,13 +128,9 @@
 	</div>
 </ons-bottom-toolbar>
 
+
     <script>ons.getScriptPage().onInit = function () {
     console.log(router.topPage.data, this);
-    $('#pickOrderType').singlePicker({
-        data: [{ text: '普通订单', value: 1 }, { text: '特价单', value: 2 }],
-        selectedIndex: 0,
-        title: '选择订单类型',
-    });
 };
 </script><!--ignore-->
 </ons-page>

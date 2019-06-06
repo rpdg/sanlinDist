@@ -33,26 +33,10 @@
 				</div>
 			</ons-list-item>
 			<ons-list-item class="listBody" data-id="333" modifier="longdivider" tappable>
-				<div class="list-item__subtitle">无锡先导智能设备有限公司</div>
+				<div class="list-item__subtitle">On the Internet</div>
 				<div class="list-item__subtitle">
 					<span class="mx-10 fl-right">2019/05/19</span>
-					光池（上海）有限公司
-				</div>
-			</ons-list-item>
-		</ons-list>
-
-
-		<ons-list class="my-10 abnormal">
-			<ons-list-item class="listHead" data-id="333" modifier="longdivider" tappable>
-				<div class="center font-16">
-					单号：201905190426
-				</div>
-			</ons-list-item>
-			<ons-list-item class="listBody" data-id="333" modifier="longdivider" tappable>
-				<div class="list-item__subtitle">无锡先导智能设备有限公司</div>
-				<div class="list-item__subtitle">
-					<span class="mx-10 fl-right">2019/05/19</span>
-					光池（上海）有限公司
+					On the Internet you can refresh the previous page using one of these
 				</div>
 			</ons-list-item>
 		</ons-list>
@@ -65,10 +49,26 @@
 				</div>
 			</ons-list-item>
 			<ons-list-item class="listBody" data-id="333" modifier="longdivider" tappable>
-				<div class="list-item__subtitle">无锡先导智能设备有限公司</div>
+				<div class="list-item__subtitle">On the Internet</div>
 				<div class="list-item__subtitle">
 					<span class="mx-10 fl-right">2019/05/19</span>
-					光池（上海）有限公司
+					On the Internet you can refresh the previous page using one of these
+				</div>
+			</ons-list-item>
+		</ons-list>
+
+
+		<ons-list class="my-10">
+			<ons-list-item class="listHead" data-id="333" modifier="longdivider" tappable>
+				<div class="center font-16">
+					单号：201905190426
+				</div>
+			</ons-list-item>
+			<ons-list-item class="listBody" data-id="333" modifier="longdivider" tappable>
+				<div class="list-item__subtitle">On the Internet</div>
+				<div class="list-item__subtitle">
+					<span class="mx-10 fl-right">2019/05/19</span>
+					On the Internet you can refresh the previous page using one of these
 				</div>
 			</ons-list-item>
 		</ons-list>
@@ -96,7 +96,7 @@
 
     <script>ons.getScriptPage().onInit = function () {
     console.log(router.topPage.data);
-    ons.preload('./pages/special_price_detail.html');
+    ons.preload('./pages/sso_price_detail.html');
     const loadingModal = document.getElementById('mdLoading');
     loadingModal.show();
     setTimeout(function () {
@@ -104,7 +104,7 @@
     }, 1000);
     let fired = false;
     $(this).on('click', '.listHead,.listBody', function () {
-        router.pushPage('./pages/special_price_detail.html', {
+        router.pushPage('./pages/sso_price_detail.html', {
             data: { id: this.getAttribute('data-id') },
             animation: 'slide'
         });
