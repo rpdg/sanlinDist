@@ -8,7 +8,7 @@
 </ons-toolbar>
 
 <ons-list style="margin: 10px 0 ;">
-	<ons-list-item id="pickAgent" modifier="longdivider chevron" tappable>
+	<ons-list-item id="shPickAgent" modifier="longdivider chevron" tappable>
 		<div class="left"><span class="font-16">代理商</span></div>
 		<div class="right font-16"><span class="text-gray">请选择代理商</span></div>
 	</ons-list-item>
@@ -24,11 +24,11 @@
 		<div class="left"><span class="font-16">状态</span></div>
 		<div class="right"><span id="" class="font-16 text-gray">请选择状态</span></div>
 	</ons-list-item>
-	<ons-list-item id="pickStartDate" modifier="longdivider chevron" tappable>
+	<ons-list-item id="shPickStartDate" modifier="longdivider chevron" tappable>
 		<div class="left"><span class="font-16">开始时间</span></div>
 		<div class="right font-16"><span class="text-gray">请选择开始时间</span></div>
 	</ons-list-item>
-	<ons-list-item id="pickEndDate" modifier="longdivider chevron" tappable>
+	<ons-list-item id="shPickEndDate" modifier="longdivider chevron" tappable>
 		<div class="left"><span class="font-16">结束时间</span></div>
 		<div class="right font-16"><span class="text-gray">请选择结束时间</span></div>
 	</ons-list-item>
@@ -48,14 +48,13 @@
     $(this).on('show', function () {
         if (!fired) {
             fired = true;
-            $('#check-all').syncCheckBoxGroup(':checkbox', '#Tab1');
-            $('#pickAgent').singlePicker({
+            $('#shPickAgent', this).singlePicker({
                 data: [{ text: 'aaa-1', value: 234 }, { text: 'bbb-2', value: 456 }],
                 selectedIndex: 0,
                 title: '选择代理商',
             });
-            $('#pickStartDate').datePicker();
-            $('#pickEndDate').datePicker();
+            $('#shPickStartDate', this).datePicker();
+            $('#shPickEndDate', this).datePicker();
         }
     });
 };
