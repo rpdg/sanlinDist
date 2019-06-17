@@ -94,12 +94,16 @@
 
 
     <script>ons.getScriptPage().onInit = function () {
+    let fired = false;
     $(this)
         .on('show', function () {
-        $('#spUserName').text(currentUser.userName);
-        $('#divNavRight').click(function () {
-            document.getElementById('popover').show(this);
-        });
+        if (!fired) {
+            fired = true;
+            $('#spUserName').text(currentUser.userName);
+            $('#divNavRight').click(function () {
+                document.getElementById('popover').show(this);
+            });
+        }
     })
         .on('click', 'ons-card', function () {
         const pageUrl = this.getAttribute('data-to');
