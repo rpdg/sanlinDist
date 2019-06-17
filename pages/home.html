@@ -28,7 +28,7 @@
 
 <ons-popover id="popover" cancelable>
 	<div style="text-align:center; ">
-		<p>关于</p>
+		<p id="btnAbout">关于</p>
 		<hr>
 		<p id="btnLogOut">退出登录</p>
 	</div>
@@ -108,6 +108,10 @@
         .on('click', '#btnLogOut', function () {
         Store.remove('authorization');
         router.resetToPage('./pages/login.html');
+    })
+        .on('click', '#btnAbout', function () {
+        ons.notification.alert('Version: 1.0.617');
+        document.getElementById('popover').hide();
     });
     ons.preload([
         './pages/order_list.html',
