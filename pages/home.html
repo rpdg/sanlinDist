@@ -94,28 +94,23 @@
 
 
     <script>ons.getScriptPage().onInit = function () {
-    let fired = false;
     $(this)
-        .on('show', function () {
-        if (!fired) {
-            fired = true;
-            $('#spUserName').text(currentUser.userName);
-            $('#divNavRight').click(function () {
-                document.getElementById('popover').show(this);
-            });
-        }
-    })
-        .on('click', 'ons-card', function () {
+        .on('click', 'ons-card', function (e) {
         const pageUrl = this.getAttribute('data-to');
         router.pushPage(pageUrl, { data: { count: 3 }, animation: 'slide' });
     })
         .on('click', '#btnLogOut', function () {
         Store.remove('authorization');
+        document.getElementById('popover').hide();
         router.resetToPage('./pages/login.html');
     })
-        .on('click', '#btnAbout', function () {
+        .on('click', '#btnAbout', function (e) {
         ons.notification.alert('Version: 1.0.617');
         document.getElementById('popover').hide();
+    });
+    $('#spUserName').text(currentUser.userName);
+    $('#divNavRight').click(function () {
+        document.getElementById('popover').show(this);
     });
     ons.preload([
         './pages/order_list.html',
