@@ -209,9 +209,17 @@ page.onInit = function () {
     $('#btnLogin').on('click', function () {
         const username = document.querySelector('#username').value;
         const password = document.querySelector('#password').value;
-        if (username === 'a' && password === '1') {
+        if (username != '') {
+            if (username === 'VBSOL01') {
+                currentUser.userName = '倪宏锋';
+            }
+            else if (username === 'VBSOL02') {
+                currentUser.userName = '陆萍';
+            }
+            else if (username === 'BABPCLC') {
+                currentUser.userName = '崔龙成';
+            }
             currentUser.loginName = username;
-            currentUser.userName = '阿律才';
             currentUser.userId = 123456;
             Store.set('authorization', currentUser);
             router.resetToPage('./pages/home.html', { animation: 'fade' });
