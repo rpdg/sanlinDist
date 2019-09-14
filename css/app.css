@@ -57,7 +57,7 @@ ons-back-button .back-button__label { font-size: 14px; }
 */
 .tb-wrapper { display: block; width: 100%; overflow-x: scroll; -webkit-overflow-x-scrolling: touch; -ms-overflow-x-style: none; -ms-scroll-snap-type: mandatory; }
 
-.tb-wrapper > .tb { table-layout: fixed; border: 1px solid #ddd; border-collapse: collapse; }
+.tb-wrapper > .tb { table-layout: fixed; min-width: 100%; border: 1px solid #ddd; border-collapse: collapse; }
 
 .tb-wrapper > .tb > thead > tr { background-color: #888; color: #ffffff; }
 

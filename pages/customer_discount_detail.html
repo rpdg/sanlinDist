@@ -7,7 +7,6 @@
 	<div class="center">客户折扣明细</div>
 </ons-toolbar>
 
-
 <style>
 	.divProf {
 		width: 100%;
@@ -17,62 +16,66 @@
 <ons-list>
 	<ons-list-item modifier="longdivider">
 		<ons-icon icon="fa-list-alt" style="color:#ee1a26;" class="mr-10"></ons-icon>
-		<span class="font-16">单号：3466712</span>
+		<span class="font-16">单号：CD201908280001</span>
 	</ons-list-item>
 	<ons-list-item class="pr-10 font-16" modifier="longdivider">
 		<div class="divProf">
-			<span class="fl-left text-gray">日期：</span> <span class="fl-right">2019-05-19</span>
+			<span class="fl-left text-gray">日期：</span> <span class="fl-right">2019/08/28</span>
 		</div>
 		<div class="divProf">
-			<span class="fl-left text-gray">一级代理商：</span> <span class="fl-right">On the Internet</span>
+			<span class="fl-left text-gray">一级代理商：</span>
+			<span class="fl-right">张家港保税区欧菱机电贸易有限公司</span>
 		</div>
 		<div class="divProf">
-			<span class="fl-left text-gray">二级代理商：</span> <span class="fl-right">On the Internet</span>
+			<span class="fl-left text-gray">二级代理商：</span>
+			<span class="fl-right">苏州菱麦自动化设备科技有限公司</span>
 		</div>
 		<div class="divProf">
-			<span class="fl-left text-gray">客户名称：</span> <span class="fl-right">On the Internet</span>
+			<span class="fl-left text-gray">客户名称：</span> <span class="fl-right">博众精工科技股份有限公司</span>
 		</div>
 	</ons-list-item>
 </ons-list>
 
-<p class="font-16">
-	<b class="prefix"></b>产品明细
-</p>
+<p class="font-16"><b class="prefix"></b>产品明细</p>
 
 <div class="tb-wrapper">
 	<table class="tb">
 		<thead>
 			<tr>
 				<th>产品名称</th>
-				<th>面价</th>
 				<th>折扣</th>
-				<th>折扣金额</th>
-				<th>操作说明</th>
+				<th>数量</th>
+				<th>期限</th>
+				<th>类型</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<td>a</td>
-				<td>2019/05/19</td>
-				<td>v</td>
-				<td>b</td>
-				<td>q</td>
+				<td>1300001383</td>
+				<td>57.70</td>
+				<td>50.00</td>
+				<td>2019上半财年</td>
+				<td>一次性</td>
 			</tr>
 			<tr>
-				<td>a</td>
-				<td>d</td>
-				<td>v</td>
-				<td>b</td>
-				<td>q</td>
+				<td>1890003707</td>
+				<td>57.70</td>
+				<td>50.00</td>
+				<td>2019上半财年</td>
+				<td>一次性</td>
+			</tr>
+			<tr>
+				<td>1300001959</td>
+				<td>57.70</td>
+				<td>100.00</td>
+				<td>2019上半财年</td>
+				<td>一次性</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
 
-
-<p class="font-16">
-	<b class="prefix"></b>处理过程
-</p>
+<p class="font-16"><b class="prefix"></b>处理过程</p>
 
 <div class="tb-wrapper">
 	<table class="tb">
@@ -87,31 +90,29 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>a</td>
-				<td>2019/05/19</td>
-				<td>v</td>
-				<td>b</td>
-				<td>q</td>
+				<td>陆萍</td>
+				<td>2019/09/12</td>
+				<td>修改特价单</td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr>
-				<td>a</td>
-				<td>d</td>
-				<td>v</td>
-				<td>b</td>
-				<td>q</td>
+				<td>倪宏锋</td>
+				<td>2019/09/13</td>
+				<td>审批/提供意见</td>
+				<td></td>
+				<td></td>
 			</tr>
-			<tr>
-				<td>a</td>
-				<td>2019/05/19</td>
-				<td>v</td>
-				<td>b</td>
-				<td>q</td>
+			<tr id="trNk">
+				<td>唐琪琳</td>
+				<td>2019/09/13</td>
+				<td>审批/提供意见</td>
+				<td></td>
+				<td></td>
 			</tr>
 		</tbody>
 	</table>
 </div>
-
-
 
 <style>
 	.btmButton {
@@ -130,7 +131,12 @@
 
 
     <script>ons.getScriptPage().onInit = function () {
-    console.log(router.topPage.data, this);
+    const id = router.topPage.data.id;
+    console.log(id, this);
+    const userNk = 'VBSOL02/VBSOL01'.split('/');
+    if (userNk.indexOf(currentUser.loginName) > -1) {
+        $('#trNk').remove();
+    }
 };
 </script><!--ignore-->
 </ons-page>

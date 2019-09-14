@@ -7,114 +7,84 @@
 	<div class="center">FA BOM 特价单明细</div>
 </ons-toolbar>
 
-
 <style>
+	.page__content {
+		bottom: 44px !important;
+		padding-bottom: 1em !important;
+		overflow-y: auto !important;
+	}
 	.divProf {
 		width: 100%;
 		line-height: 2em;
+	}
+	#divGP {
+		display: none;
 	}
 </style>
 <ons-list>
 	<ons-list-item modifier="longdivider">
 		<ons-icon icon="fa-list-alt" style="color:#ee1a26;" class="mr-10"></ons-icon>
-		<span class="font-16">单号：4612367</span>
+		<span class="font-16">单号：<span id="sp_orderNo"></span></span>
 	</ons-list-item>
 	<ons-list-item class="pr-10 font-16" modifier="longdivider">
 		<div class="divProf">
-			<span class="fl-left text-gray">日期：</span> <span class="fl-right">2019-05-19</span>
+			<span class="fl-left text-gray">日期：</span> <span id="sp_date" class="fl-right"></span>
 		</div>
 		<div class="divProf">
-			<span class="fl-left text-gray">一级代理商：</span> <span class="fl-right">On the Internet</span>
+			<span class="fl-left text-gray">一级代理商：</span> <span id="sp_angent1" class="fl-right"></span>
 		</div>
 		<div class="divProf">
-			<span class="fl-left text-gray">二级代理商：</span> <span class="fl-right">On the Internet</span>
+			<span class="fl-left text-gray">二级代理商：</span> <span id="sp_angent2" class="fl-right"></span>
 		</div>
 		<div class="divProf">
-			<span class="fl-left text-gray">客户名称：</span> <span class="fl-right">On the Internet</span>
+			<span class="fl-left text-gray">客户名称：</span> <span id="sp_customer" class="fl-right"></span>
 		</div>
 		<div class="divProf">
-			<span class="fl-left text-gray">项目总价：</span> <span class="fl-right">&yen; 489,353,34.00</span>
+			<span class="fl-left text-gray">项目总价：</span> <span id="sp_price" class="fl-right"></span>
 		</div>
-		<div class="divProf">
+		<div id="divGP" class="divProf">
 			<span class="fl-left text-gray">整单GP：</span> <span class="fl-right">-9.60</span>
 		</div>
 	</ons-list-item>
 </ons-list>
 
-
 <ons-list style="margin: 10px 0;">
-    <ons-list-item id="pickSample" modifier="chevron" tappable>
-        <div class="left text-gray font-16">样机/Slowmoving</div>
-        <div class="right font-16">是</div>
-    </ons-list-item>
+	<ons-list-item id="pickSample" modifier="chevron" tappable>
+		<div class="left text-gray font-16">样机/Slowmoving</div>
+		<div class="right font-16">是</div>
+	</ons-list-item>
 </ons-list>
 
-
-<p class="font-16">
-	<b class="prefix"></b>产品明细
-</p>
+<p class="font-16"><b class="prefix"></b>产品明细</p>
 <div class="tb-wrapper">
-	<table class="tb">
+	<table id="tbM1" class="tb">
 		<thead>
 			<tr>
 				<th>产品名称</th>
-				<th>面价</th>
 				<th>折扣</th>
-				<th>折扣金额</th>
-				<th>操作说明</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>a</td>
-				<td>2019/05/19</td>
-				<td>v</td>
-				<td>b</td>
-				<td>q</td>
-			</tr>
-			<tr>
-				<td>a</td>
-				<td>d</td>
-				<td>v</td>
-				<td>b</td>
-				<td>q</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-
-
-
-<p class="font-16">
-	<b class="prefix"></b>产品线金额
-</p>
-<div class="tb-wrapper">
-	<table class="tb">
-		<thead>
-			<tr>
-				<th>产品线</th>
-				<th>金额</th>
-				<th>折扣</th>
+				<th>总金额</th>
 				<th>GP</th>
-				<th>操作说明</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<td>a</td>
-				<td>2019/05/19</td>
-				<td>v</td>
-				<td>b</td>
-				<td>q</td>
+				<td>1130002651</td>
+				<td>29.00</td>
+				<td>36,159.52</td>
+				<td>-12.86</td>
+			</tr>
+			<tr>
+				<td>1130002557</td>
+				<td>29.00</td>
+				<td>21,244.24</td>
+				<td>-41.00</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
 
+<p class="font-16"><b class="prefix"></b>处理过程</p>
 
-<p class="font-16">
-	<b class="prefix"></b>处理过程
-</p>
 <div class="tb-wrapper">
 	<table class="tb">
 		<thead>
@@ -128,31 +98,31 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>a</td>
-				<td>2019/05/19</td>
-				<td>v</td>
-				<td>b</td>
-				<td>q</td>
+				<td>陆萍</td>
+				<td>2019/09/12</td>
+				<td>修改特价单</td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr>
-				<td>a</td>
-				<td>d</td>
-				<td>v</td>
-				<td>b</td>
-				<td>q</td>
+				<td>倪宏锋</td>
+				<td>2019/09/13</td>
+				<td>审批/提供意见</td>
+				<td></td>
+				<td></td>
 			</tr>
-			<tr>
-				<td>a</td>
-				<td>2019/05/19</td>
-				<td>v</td>
-				<td>b</td>
-				<td>q</td>
+			<tr id="trNk">
+				<td>唐琪琳</td>
+				<td>2019/09/13</td>
+				<td>审批/提供意见</td>
+				<td></td>
+				<td></td>
 			</tr>
 		</tbody>
 	</table>
 </div>
 
-
+<div id="divConWraper"></div>
 
 <style>
 	.btmButton {
@@ -175,8 +145,103 @@
     $('#pickSample').singlePicker({
         data: [{ text: '是', value: 1 }, { text: '否', value: 0 }],
         selectedIndex: 0,
-        title: '选择是否样机',
+        title: '选择是否样机'
     });
+    const id = router.topPage.data.id;
+    console.log(id, this);
+    if (id == '111') {
+        let orderNo = 'SS201909090017';
+        let date = '2019/09/09';
+        let angent1 = '张家港保税区欧菱机电贸易有限公司';
+        let angent2 = '苏州菱麦自动化设备科技有限公司';
+        let customer = '博众精工科技股份有限公司';
+        let price = '&yen; 4,659,850.00';
+        $('#sp_orderNo').text(orderNo);
+        $('#sp_date').text(date);
+        $('#sp_angent1').text(angent1);
+        $('#sp_angent2').text(angent2);
+        $('#sp_customer').text(customer);
+        $('#sp_price').html(price);
+    }
+    const userGP = 'MASPWGU/MASPCCY/MASPAT/MASPLJI/RISPZW/MASPWJ'.split('/');
+    if (userGP.indexOf(currentUser.loginName) === -1) {
+        $('#tbM1').find('tr').each(function (i, tr) {
+            $(this).find('th:eq(3)').hide();
+            $(this).find('td:eq(3)').hide();
+        });
+    }
+    else {
+        $('#divGP').show();
+    }
+    const userNk = 'VBSOL02/VBSOL01'.split('/');
+    if (userNk.indexOf(currentUser.loginName) > -1) {
+        $('#trNk').remove();
+    }
+    else {
+        if (id != '111') {
+            $('#trNk').html(`
+            <td>唐琪琳</td>
+            <td>2019/09/13</td>
+            <td>拒绝/提供意见</td>
+            <td>重复的单据</td>
+            <td></td>
+            `);
+        }
+    }
+    const userWp = 'BABPZNJ/MASPLKY/BABPZHQ'.split('/');
+    if (userWp.indexOf(currentUser.loginName) > -1) {
+        $('#divConWraper').html(`
+            <p class="font-16">
+                <b class="prefix"></b>产品线金额
+            </p>
+            <div class="tb-wrapper">
+                <table class="tb">
+                    <thead>
+                    <tr>
+                        <th>产品线</th>
+                        <th>折扣</th>
+                        <th>总金额</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>11</td>
+                    <td>29.00</td>
+                    <td>57,403.76</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        `);
+    }
+    const userWss = 'MASPWGU/MASPCCY/MASPAT/MASPLJI/RISPZW/MASPWJ'.split('/');
+    if (userWss.indexOf(currentUser.loginName) > -1) {
+        $('#divConWraper').html(`
+            <p class="font-16">
+                <b class="prefix"></b>产品线金额
+            </p>
+            <div class="tb-wrapper">
+                <table class="tb">
+                    <thead>
+                    <tr>
+                        <th>产品线</th>
+                        <th>折扣</th>
+                        <th>总金额</th>
+                        <th>GP(%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>11</td>
+                    <td>29.00</td>
+                    <td>57,403.76</td>
+                    <td>-9.62</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        `);
+    }
 };
 </script><!--ignore-->
 </ons-page>

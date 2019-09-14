@@ -2,7 +2,7 @@
 	
 <style>
 	.page__content {
-		background-image: url('/sanlinDist/img/bg.jpg?__=9eaed83') !important;
+		background-image: url('/sanlinDist/img/bg.jpg?__=md5') !important;
 		background-size: 100% 100% !important;
 		background-attachment: fixed !important;
 	}
@@ -206,19 +206,65 @@ page.onInit = function () {
             $ipt.val('').trigger('input');
         });
     });
+    const DEMO_USERS = {
+        VBSOL02: {
+            userName: '陆萍',
+            loginName: 'VBSOL02',
+        },
+        VBSOL01: {
+            userName: '倪宏锋',
+            loginName: 'VBSOL01',
+        },
+        MASPTQL: {
+            userName: '唐琪琳',
+            loginName: 'MASPTQL',
+        },
+        MASPWJJ: {
+            userName: '吴佳军',
+            loginName: 'MASPWJJ',
+        },
+        BABPZNJ: {
+            userName: '张俭',
+            loginName: 'BABPZNJ',
+        },
+        MASPLKY: {
+            userName: '黎凯燕',
+            loginName: 'MASPLKY',
+        },
+        BABPZHQ: {
+            userName: '郑海青',
+            loginName: 'BABPZHQ',
+        },
+        MASPWGU: {
+            userName: '王光',
+            loginName: 'MASPWGU',
+        },
+        MASPCCY: {
+            userName: '崔彩云',
+            loginName: 'MASPCCY',
+        },
+        MASPAT: {
+            userName: '浅井哲彦',
+            loginName: 'MASPAT',
+        },
+        MASPLJI: {
+            userName: '刘洁',
+            loginName: 'MASPLJI',
+        },
+        RISPZW: {
+            userName: '张巍',
+            loginName: 'RISPZW',
+        },
+        MASPWJ: {
+            userName: '王坚',
+            loginName: 'MASPWJ',
+        },
+    };
     $('#btnLogin').on('click', function () {
         const username = document.querySelector('#username').value;
         const password = document.querySelector('#password').value;
-        if (username != '') {
-            if (username === 'VBSOL01') {
-                currentUser.userName = '倪宏锋';
-            }
-            else if (username === 'VBSOL02') {
-                currentUser.userName = '陆萍';
-            }
-            else if (username === 'BABPCLC') {
-                currentUser.userName = '崔龙成';
-            }
+        if (username in DEMO_USERS && password == '1') {
+            currentUser.userName = DEMO_USERS[username].userName;
             currentUser.loginName = username;
             currentUser.userId = 123456;
             Store.set('authorization', currentUser);
@@ -227,16 +273,6 @@ page.onInit = function () {
         else {
             ons.notification.alert('Wrong username/password combination');
         }
-    });
-    ons.createDialog('alert-dialog.html').then(function (dialog) {
-        document.querySelector('.dialog-container').style.cssText += 'height: 350px;';
-        dialog.show();
-        $('#icoClose,#btnCheckAgent').one('click', function () {
-            dialog.hide();
-        });
-        $(dialog).on('click', 'ons-list-item', function () {
-            $(this).addClass('checked').siblings().removeClass('checked');
-        });
     });
 };
 </script><!--ignore-->

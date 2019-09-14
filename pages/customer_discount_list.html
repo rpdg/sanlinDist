@@ -19,7 +19,7 @@
 </ons-tabbar>
 
 <template id="tab1.html">
-	<ons-page id="Tab1">
+	<ons-page id="Tab1" style="display: none">
 		<ons-list style="margin: 10px 0;">
 			<ons-list-item id="pickAgent" modifier="chevron" tappable>
 				<div class="left"><span class="font-16">代理商</span></div>
@@ -30,49 +30,20 @@
 		<ons-list class="my-10">
 			<ons-list-item class="listHead" data-id="333" modifier="longdivider" tappable>
 				<div class="center font-16">
-					单号：201905190426
+					单号：CD201908280001
 				</div>
 			</ons-list-item>
 			<ons-list-item class="listBody" data-id="333" modifier="longdivider" tappable>
-				<div class="list-item__subtitle">无锡先导智能设备有限公司</div>
+				<div class="list-item__subtitle">张家港保税区欧菱机电贸易有限公司</div>
+				<div class="list-item__subtitle">苏州菱麦自动化设备科技有限公司</div>
 				<div class="list-item__subtitle">
-					<span class="mx-10 fl-right">2019/05/19</span>
-					光池（上海）有限公司
+					<span class="mx-10 fl-right">2019/08/28</span>
+					博众精工科技股份有限公司
 				</div>
 			</ons-list-item>
 		</ons-list>
 
 
-		<ons-list class="my-10">
-			<ons-list-item class="listHead" data-id="333" modifier="longdivider" tappable>
-				<div class="center font-16">
-					单号：201905190426
-				</div>
-			</ons-list-item>
-			<ons-list-item class="listBody" data-id="333" modifier="longdivider" tappable>
-				<div class="list-item__subtitle">无锡先导智能设备有限公司</div>
-				<div class="list-item__subtitle">
-					<span class="mx-10 fl-right">2019/05/19</span>
-					光池（上海）有限公司
-				</div>
-			</ons-list-item>
-		</ons-list>
-
-
-		<ons-list class="my-10">
-			<ons-list-item class="listHead" data-id="333" modifier="longdivider" tappable>
-				<div class="center font-16">
-					单号：201905190426
-				</div>
-			</ons-list-item>
-			<ons-list-item class="listBody" data-id="333" modifier="longdivider" tappable>
-				<div class="list-item__subtitle">无锡先导智能设备有限公司</div>
-				<div class="list-item__subtitle">
-					<span class="mx-10 fl-right">2019/05/19</span>
-					光池（上海）有限公司
-				</div>
-			</ons-list-item>
-		</ons-list>
 
 
 
@@ -82,7 +53,7 @@
 <template id="tab2.html">
 	<ons-page id="Tab2">
 		<p style="text-align: center;">
-			This is the second page.
+			&nbsp;
 		</p>
 	</ons-page>
 </template>
@@ -90,7 +61,7 @@
 <template id="tab3.html">
 	<ons-page id="Tab3">
 		<p style="text-align: center;">
-			This is the third page.
+			&nbsp;
 		</p>
 	</ons-page>
 </template>
@@ -130,6 +101,9 @@
                 selectedIndex: 0,
                 title: '选择代理商',
             });
+            if (currentUser.loginName === 'MASPWJ') {
+                $('#Tab1').show();
+            }
         }
     });
 };
