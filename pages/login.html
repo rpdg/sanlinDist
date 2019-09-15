@@ -178,8 +178,7 @@
 </template>
 
 
-    <script>const page = ons.getScriptPage();
-page.onDestroy = function () {
+    <script>ons.getScriptPage().onDestroy = function () {
     $('.clearable').each(function () {
         var $inp = $(this).find('input'), $cle = $(this).find('.clearable__clear');
         $inp.off('input blur focus');
@@ -187,7 +186,7 @@ page.onDestroy = function () {
     });
     $('#btnLogin').off('click');
 };
-page.onInit = function () {
+ons.getScriptPage().onInit = function () {
     $('.clearable').each(function () {
         var $ipt = $(this).find('input'), $clearSignal = $(this).find('.clearable__clear');
         $ipt.on('input', function () {
