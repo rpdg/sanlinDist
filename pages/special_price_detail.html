@@ -54,7 +54,7 @@
 </p>
 
 <div class="tb-wrapper">
-	<table class="tb">
+	<table id="tbProductList" class="tb">
 		<thead>
 			<tr>
 				<th>产品名称</th>
@@ -69,25 +69,25 @@
 			<tr>
 				<td>1300001383</td>
 				<td>2,728.00</td>
-				<td>57.70</td>
+				<td class="TdEditable">57.70</td>
 				<td>1,574.14</td>
-				<td>50.00</td>
+				<td class="TdEditable">50.00</td>
 				<td>78,707.00</td>
 			</tr>
 			<tr>
 				<td>1890003707</td>
 				<td>158,589.00</td>
-				<td>57.70</td>
+				<td class="TdEditable">57.70</td>
 				<td>91,510.92</td>
-				<td>50.00</td>
+				<td class="TdEditable">50.00</td>
 				<td>4,575,546.00</td>
 			</tr>
 			<tr>
 				<td>1300001959</td>
 				<td>97.00</td>
-				<td>57.70</td>
+				<td class="TdEditable">57.70</td>
 				<td>55.97</td>
-				<td>100.00</td>
+				<td class="TdEditable">100.00</td>
 				<td>5,597.00</td>
 			</tr>
 		</tbody>
@@ -268,6 +268,25 @@
             </div>
         `);
     }
+    $('#tbProductList').on('click', '.TdEditable', function () {
+        let td = $(this);
+        let oldValue = td.text();
+        ons.notification
+            .prompt({
+            title: '修改',
+            message: '请输入数字',
+            placeholder: '数字',
+            defaultValue: oldValue,
+            buttonLabels: ['取消', '确定'],
+            inputType: 'text'
+        })
+            .then(function (input) {
+            if (input && input.toString() != oldValue) {
+                ons.notification.alert('修改完成', { title: '' });
+                td.html(input);
+            }
+        });
+    });
 };
 </script><!--ignore-->
 </ons-page>
