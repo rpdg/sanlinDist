@@ -12,8 +12,8 @@
 */
 @font-face {
   font-family: "Ionicons";
-  src: url("/sanlinDist/css/ionicons/fonts/ionicons.eot?__=md5&v=4.5.5");
-  src: url("/sanlinDist/css/ionicons/fonts/ionicons.eot?__=md5&v=4.5.5#iefix") format("embedded-opentype"), url("/sanlinDist/css/ionicons/fonts/ionicons.woff2?__=md5&v=4.5.5") format("woff2"), url("/sanlinDist/css/ionicons/fonts/ionicons.woff?__=md5&v=4.5.5") format("woff"), url("/sanlinDist/css/ionicons/fonts/ionicons.ttf?__=md5&v=4.5.5") format("truetype"), url("/sanlinDist/css/ionicons/fonts/ionicons.svg?__=md5&v=4.5.5#Ionicons") format("svg");
+  src: url("/sanlinDist/css/ionicons/fonts/ionicons.eot?__=7f9fdd5&v=4.5.5");
+  src: url("/sanlinDist/css/ionicons/fonts/ionicons.eot?__=7f9fdd5&v=4.5.5#iefix") format("embedded-opentype"), url("/sanlinDist/css/ionicons/fonts/ionicons.woff2?__=96f1c90&v=4.5.5") format("woff2"), url("/sanlinDist/css/ionicons/fonts/ionicons.woff?__=c37ad37&v=4.5.5") format("woff"), url("/sanlinDist/css/ionicons/fonts/ionicons.ttf?__=cfdc152&v=4.5.5") format("truetype"), url("/sanlinDist/css/ionicons/fonts/ionicons.svg?__=6659210&v=4.5.5#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
