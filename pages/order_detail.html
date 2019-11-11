@@ -175,22 +175,22 @@
         selectedIndex: 0,
         title: '选择订单类型'
     });
-    const id = router.topPage.data.id;
+    var id = router.topPage.data.id;
     console.log(id, this);
     if (id == '111') {
-        let orderNo = 'DD201909010001';
-        let date = '2019/09/01';
-        let angent1 = '张家港保税区欧菱机电贸易有限公司';
-        let angent2 = '苏州菱麦自动化设备科技有限公司';
-        let customer = '博众精工科技股份有限公司';
-        let price = '&yen; 3,662,950.00';
+        var orderNo = 'DD201909010001';
+        var date = '2019/09/01';
+        var angent1 = '张家港保税区欧菱机电贸易有限公司';
+        var angent2 = '苏州菱麦自动化设备科技有限公司';
+        var customer = '博众精工科技股份有限公司';
+        var price = '&yen; 3,662,950.00';
         $('#sp_orderNo').text(orderNo);
         $('#sp_angent1').text(angent1);
         $('#sp_angent2').text(angent2);
         $('#sp_customer').text(customer);
         $('#sp_price').html(price);
     }
-    const userNk = 'VBSOL02/VBSOL01'.split('/');
+    var userNk = 'VBSOL02/VBSOL01'.split('/');
     if (userNk.indexOf(currentUser.loginName) > -1) {
         $('#trNk').remove();
     }

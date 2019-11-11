@@ -19,18 +19,22 @@
 <template id="tab1.html">
 	<ons-page id="Tab1">
 		<ons-list class="my-10">
+			<ons-list-item id="giveAgent" modifier="chevron">
+				<div class="left"><span class="font-16">授权人</span></div>
+				<div class="right font-16"><span class="text-gray" id="giveAgentSpan"></span></div>
+			</ons-list-item>
 			<ons-list-item id="pickAgent" modifier="chevron" tappable>
 				<div class="left"><span class="font-16">代理人</span></div>
 				<div class="right font-16"><span class="text-gray">请选择</span></div>
 			</ons-list-item>
-            <ons-list-item id="pickStartDate" modifier="longdivider chevron" tappable>
-                <div class="left"><span class="font-16">代理开始时间</span></div>
-                <div class="right font-16"><span class="text-gray">请选择开始时间</span></div>
-            </ons-list-item>
-            <ons-list-item id="pickEndDate" modifier="longdivider chevron" tappable>
-                <div class="left"><span class="font-16">代理结束时间</span></div>
-                <div class="right font-16"><span class="text-gray">请选择结束时间</span></div>
-            </ons-list-item>
+			<ons-list-item id="pickStartDate" modifier="longdivider chevron" tappable>
+				<div class="left"><span class="font-16">代理开始时间</span></div>
+				<div class="right font-16"><span class="text-gray">请选择开始时间</span></div>
+			</ons-list-item>
+			<ons-list-item id="pickEndDate" modifier="longdivider chevron" tappable>
+				<div class="left"><span class="font-16">代理结束时间</span></div>
+				<div class="right font-16"><span class="text-gray">请选择结束时间</span></div>
+			</ons-list-item>
 			<ons-list-item id="pickAgentRole" modifier="chevron" tappable>
 				<div class="left"><span class="font-16">代理角色</span></div>
 				<div class="right font-16"><span class="text-gray">请选择</span></div>
@@ -53,12 +57,8 @@
 		</style>
 		<ons-bottom-toolbar>
 			<label class="font-16" style="display: inline-block; margin: 10px 15px ;">
-				<ons-checkbox
-					input-id="check-all"
-					modifier="material"
-					value="something"
-					style="vertical-align: baseline; margin-right: 6px;"
-				></ons-checkbox>
+				<ons-checkbox input-id="check-all" modifier="material" value="something"
+					style="vertical-align: baseline; margin-right: 6px;"></ons-checkbox>
 				全部权限
 			</label>
 
@@ -81,7 +81,7 @@
 
 
     <script>ons.getScriptPage().onInit = function () {
-    let fired = false;
+    var fired = false;
     $(this)
         .on('click', '.listBody', function () {
         router.pushPage('./pages/order_detail.html', {
@@ -126,6 +126,7 @@
             });
             $('#pickStartDate', this).datePicker();
             $('#pickEndDate', this).datePicker();
+            $("#giveAgentSpan").html(currentUser.userName + "/" + currentUser.loginName);
         }
     });
 };

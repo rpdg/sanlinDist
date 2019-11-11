@@ -1,13 +1,140 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8"/>
-		<script src="./wasm_exec.js"></script>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"
+		/>
+		<title>demo</title>
+		<link rel="stylesheet" href="/sanlinDist/css/onsenui.css?__=158356c" />
+		<link rel="stylesheet" href="/sanlinDist/css/onsen-css-components.min.css?__=2906849" />
+		<link rel="preload" as="font" type="font/woff2" href="/sanlinDist/css/font_awesome/fonts/fa-brands-400.woff2?__=6814d0e" />
+		<link rel="preload" as="font" type="font/woff2" href="/sanlinDist/css/font_awesome/fonts/fa-solid-900.woff2?__=b75b4bf" />
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff2"
+			href="/sanlinDist/css/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2?__=a4d3112"
+		/>
+		<script src="/sanlinDist/lib/onsenui.min.js?__=adeb169"></script>
 		<script>
-			const go = new Go();
-			WebAssembly.instantiateStreaming(fetch("./main.wasm"), go.importObject).then((result) => {
-				go.run(result.instance);
+			ons.platform.select('ios');
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
 			});
 		</script>
+		<style >html, body { font-size: 20px; height: 100%; }
+
+ul { padding-left: 0; }
+
+p { margin: 12px 0; }
+
+hr { border: 0; height: 1px; background-color: #ccc; }
+
+.text-gray { color: #888; }
+
+.text-white { color: #ffffff; }
+
+.text-red { color: #e01c34; }
+
+.fl-left { float: left; }
+
+.fl-right { float: right; }
+
+.font-14 { font-size: 14px; }
+
+.font-16 { font-size: 16px; }
+
+.font-24 { font-size: 24px; }
+
+.pl-10 { padding-left: 10px; }
+
+.pr-10 { padding-right: 10px; }
+
+.px-10 { padding-left: 10px; padding-right: 10px; }
+
+.mt-10 { margin-top: 10px; }
+
+.mb-10 { margin-bottom: 10px; }
+
+.mr-10 { margin-right: 10px; }
+
+.ml-10 { margin-left: 10px; }
+
+.mx-10 { margin-left: 10px; margin-right: 10px; }
+
+.my-10 { margin-top: 10px; margin-bottom: 10px; }
+
+.m-10 { margin: 10px; }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.text-center { text-align: center; }
+
+.prefix { display: inline-block; height: 0.8em; margin: 0 0.6em; border-left: 3px solid #e01c34; vertical-align: middle; }
+
+ons-back-button svg { height: 14px; }
+
+ons-back-button .back-button__label { font-size: 14px; }
+
+/** 
+* table with scroll wrapper  
+*/
+.tb-wrapper { display: block; width: 100%; overflow-x: scroll; -webkit-overflow-x-scrolling: touch; -ms-overflow-x-style: none; -ms-scroll-snap-type: mandatory; }
+
+.tb-wrapper > .tb { table-layout: fixed; min-width: 100%; border: 1px solid #ddd; border-collapse: collapse; }
+
+.tb-wrapper > .tb > thead > tr { background-color: #888; color: #ffffff; }
+
+.tb-wrapper > .tb > tbody > tr:nth-of-type(odd) { background-color: #ffffff; }
+
+.tb-wrapper > .tb > tbody > tr:nth-of-type(even) { background-color: #f1f1f1; }
+
+.tb-wrapper > .tb th, .tb-wrapper > .tb td { font-size: 16px; padding: 0.5em; white-space: nowrap; vertical-align: middle; border: 1px solid #ddd; font-weight: 300; text-align: center; }
+
+.tb-wrapper > .tb th { padding: 0.5em 2em; font-weight: normal; }
+
+/* list abnormal */
+.list.abnormal { background: #e01c34; }
+
+.list.abnormal * { color: #ffffff; }
+
+/*# sourceMappingURL=app.css.map?__=md5 */</style>
 	</head>
-	<body></body>
+	<body>
+		<ons-navigator id="appNavigator"></ons-navigator>
+
+		<script src="/sanlinDist/lib/jquery-3.4.1.min.js?__=a6b6350"></script>
+		<script src="/sanlinDist/lib/picker.min.js?__=481b2e6"></script>
+		<script src="/sanlinDist/lib/utils.js?__=e8ae0f8"></script>
+		<script>
+			// ons.OnsNavigatorElement;
+			var router = document.getElementById('appNavigator');
+			var currentUser = {} ;
+
+			ons.ready(function() {
+				var user = Store.get('authorization');
+				if (user) {
+					currentUser.userId = user.userId;
+					currentUser.userName = user.userName;
+					currentUser.loginName = user.loginName;
+
+					router.resetToPage('./pages/home.html');
+				} 
+				else {
+					router.resetToPage('./pages/login.html');
+
+					// optimize speed
+					ons.preload('./pages/home.html');
+				}
+
+
+				/* document.addEventListener('init', function(event) {
+					console.log('This is a lifecycle event!', event.target);
+				}); */
+			});
+		</script>
+	</body>
 </html>

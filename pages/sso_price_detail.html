@@ -147,15 +147,15 @@
         selectedIndex: 0,
         title: '选择是否样机'
     });
-    const id = router.topPage.data.id;
+    var id = router.topPage.data.id;
     console.log(id, this);
     if (id == '111') {
-        let orderNo = 'SS201909090017';
-        let date = '2019/09/09';
-        let angent1 = '张家港保税区欧菱机电贸易有限公司';
-        let angent2 = '苏州菱麦自动化设备科技有限公司';
-        let customer = '博众精工科技股份有限公司';
-        let price = '&yen; 4,659,850.00';
+        var orderNo = 'SS201909090017';
+        var date = '2019/09/09';
+        var angent1 = '张家港保税区欧菱机电贸易有限公司';
+        var angent2 = '苏州菱麦自动化设备科技有限公司';
+        var customer = '博众精工科技股份有限公司';
+        var price = '&yen; 4,659,850.00';
         $('#sp_orderNo').text(orderNo);
         $('#sp_date').text(date);
         $('#sp_angent1').text(angent1);
@@ -163,7 +163,7 @@
         $('#sp_customer').text(customer);
         $('#sp_price').html(price);
     }
-    const userGP = 'MASPWGU/MASPCCY/MASPAT/MASPLJI/RISPZW/MASPWJ'.split('/');
+    var userGP = 'MASPWGU/MASPCCY/MASPAT/MASPLJI/RISPZW/MASPWJ'.split('/');
     if (userGP.indexOf(currentUser.loginName) === -1) {
         $('#tbM1').find('tr').each(function (i, tr) {
             $(this).find('th:eq(3)').hide();
@@ -173,74 +173,22 @@
     else {
         $('#divGP').show();
     }
-    const userNk = 'VBSOL02/VBSOL01'.split('/');
+    var userNk = 'VBSOL02/VBSOL01'.split('/');
     if (userNk.indexOf(currentUser.loginName) > -1) {
         $('#trNk').remove();
     }
     else {
         if (id != '111') {
-            $('#trNk').html(`
-            <td>唐琪琳</td>
-            <td>2019/09/13</td>
-            <td>拒绝/提供意见</td>
-            <td>重复的单据</td>
-            <td></td>
-            `);
+            $('#trNk').html("\n            <td>\u5510\u742A\u7433</td>\n            <td>2019/09/13</td>\n            <td>\u62D2\u7EDD/\u63D0\u4F9B\u610F\u89C1</td>\n            <td>\u91CD\u590D\u7684\u5355\u636E</td>\n            <td></td>\n            ");
         }
     }
-    const userWp = 'BABPZNJ/MASPLKY/BABPZHQ'.split('/');
+    var userWp = 'BABPZNJ/MASPLKY/BABPZHQ'.split('/');
     if (userWp.indexOf(currentUser.loginName) > -1) {
-        $('#divConWraper').html(`
-            <p class="font-16">
-                <b class="prefix"></b>产品线金额
-            </p>
-            <div class="tb-wrapper">
-                <table class="tb">
-                    <thead>
-                    <tr>
-                        <th>产品线</th>
-                        <th>折扣</th>
-                        <th>总金额</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>11</td>
-                    <td>29.00</td>
-                    <td>57,403.76</td>
-                </tr>
-                </tbody>
-            </table>
-            </div>
-        `);
+        $('#divConWraper').html("\n            <p class=\"font-16\">\n                <b class=\"prefix\"></b>\u4EA7\u54C1\u7EBF\u91D1\u989D\n            </p>\n            <div class=\"tb-wrapper\">\n                <table class=\"tb\">\n                    <thead>\n                    <tr>\n                        <th>\u4EA7\u54C1\u7EBF</th>\n                        <th>\u6298\u6263</th>\n                        <th>\u603B\u91D1\u989D</th>\n                    </tr>\n                </thead>\n                <tbody>\n                <tr>\n                    <td>11</td>\n                    <td>29.00</td>\n                    <td>57,403.76</td>\n                </tr>\n                </tbody>\n            </table>\n            </div>\n        ");
     }
-    const userWss = 'MASPWGU/MASPCCY/MASPAT/MASPLJI/RISPZW/MASPWJ'.split('/');
+    var userWss = 'MASPWGU/MASPCCY/MASPAT/MASPLJI/RISPZW/MASPWJ'.split('/');
     if (userWss.indexOf(currentUser.loginName) > -1) {
-        $('#divConWraper').html(`
-            <p class="font-16">
-                <b class="prefix"></b>产品线金额
-            </p>
-            <div class="tb-wrapper">
-                <table class="tb">
-                    <thead>
-                    <tr>
-                        <th>产品线</th>
-                        <th>折扣</th>
-                        <th>总金额</th>
-                        <th>GP(%)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>11</td>
-                    <td>29.00</td>
-                    <td>57,403.76</td>
-                    <td>-9.62</td>
-                </tr>
-                </tbody>
-            </table>
-            </div>
-        `);
+        $('#divConWraper').html("\n            <p class=\"font-16\">\n                <b class=\"prefix\"></b>\u4EA7\u54C1\u7EBF\u91D1\u989D\n            </p>\n            <div class=\"tb-wrapper\">\n                <table class=\"tb\">\n                    <thead>\n                    <tr>\n                        <th>\u4EA7\u54C1\u7EBF</th>\n                        <th>\u6298\u6263</th>\n                        <th>\u603B\u91D1\u989D</th>\n                        <th>GP(%)</th>\n                    </tr>\n                </thead>\n                <tbody>\n                <tr>\n                    <td>11</td>\n                    <td>29.00</td>\n                    <td>57,403.76</td>\n                    <td>-9.62</td>\n                </tr>\n                </tbody>\n            </table>\n            </div>\n        ");
     }
 };
 </script><!--ignore-->

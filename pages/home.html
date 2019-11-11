@@ -106,7 +106,7 @@
     <script>ons.getScriptPage().onInit = function () {
     $(this)
         .on('click', 'ons-card', function (e) {
-        const pageUrl = this.getAttribute('data-to');
+        var pageUrl = this.getAttribute('data-to');
         router.pushPage(pageUrl, { data: { count: 3 }, animation: 'slide' });
     })
         .on('click', '#btnLogOut', function () {

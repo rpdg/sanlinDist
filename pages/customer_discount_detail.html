@@ -131,9 +131,9 @@
 
 
     <script>ons.getScriptPage().onInit = function () {
-    const id = router.topPage.data.id;
+    var id = router.topPage.data.id;
     console.log(id, this);
-    const userNk = 'VBSOL02/VBSOL01'.split('/');
+    var userNk = 'VBSOL02/VBSOL01'.split('/');
     if (userNk.indexOf(currentUser.loginName) > -1) {
         $('#trNk').remove();
     }
