@@ -180,7 +180,7 @@
 
     <script>ons.getScriptPage().onDestroy = function () {
     $('.clearable').each(function () {
-        var $inp = $(this).find('input'), $cle = $(this).find('.clearable__clear');
+        let $inp = $(this).find('input'), $cle = $(this).find('.clearable__clear');
         $inp.off('input blur focus');
         $cle.off('touchstart click');
     });
@@ -188,7 +188,7 @@
 };
 ons.getScriptPage().onInit = function () {
     $('.clearable').each(function () {
-        var $ipt = $(this).find('input'), $clearSignal = $(this).find('.clearable__clear');
+        let $ipt = $(this).find('input'), $clearSignal = $(this).find('.clearable__clear');
         $ipt.on('input', function () {
             $clearSignal.toggle(!!this.value);
         })
@@ -205,7 +205,7 @@ ons.getScriptPage().onInit = function () {
             $ipt.val('').trigger('input');
         });
     });
-    var DEMO_USERS = {
+    const DEMO_USERS = {
         VBSOL02: {
             userName: '陆萍',
             loginName: 'VBSOL02',
@@ -260,8 +260,8 @@ ons.getScriptPage().onInit = function () {
         },
     };
     $('#btnLogin').on('click', function () {
-        var username = document.querySelector('#username').value;
-        var password = document.querySelector('#password').value;
+        const username = document.querySelector('#username').value;
+        const password = document.querySelector('#password').value;
         if (username in DEMO_USERS && password == '1') {
             currentUser.userName = DEMO_USERS[username].userName;
             currentUser.loginName = username;

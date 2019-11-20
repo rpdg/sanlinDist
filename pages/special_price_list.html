@@ -117,12 +117,12 @@
     <script>ons.getScriptPage().onInit = function () {
     console.log(router.topPage.data);
     ons.preload('./pages/special_price_detail.html');
-    var loadingModal = document.getElementById('mdLoading');
+    const loadingModal = document.getElementById('mdLoading');
     loadingModal.show();
     setTimeout(function () {
         loadingModal.hide();
     }, 1000);
-    var fired = false;
+    let fired = false;
     $(this).on('click', '.listHead,.listBody', function () {
         router.pushPage('./pages/special_price_detail.html', {
             data: { id: this.getAttribute('data-id') },

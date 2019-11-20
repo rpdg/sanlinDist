@@ -15,6 +15,9 @@
 	.toolbar .right {
 		font-size: 14px;
 	}
+	#popover p{
+		font-size: 16px;
+	}
 </style>
 
 <ons-toolbar>
@@ -28,7 +31,7 @@
 
 <ons-popover id="popover" cancelable>
 	<div style="text-align:center; ">
-		<p id="btnAbout">关于</p>
+		<p id="btnAbout">关于MAPS</p>
 		<hr>
 		<p id="btnLogOut">退出登录</p>
 	</div>
@@ -106,7 +109,7 @@
     <script>ons.getScriptPage().onInit = function () {
     $(this)
         .on('click', 'ons-card', function (e) {
-        var pageUrl = this.getAttribute('data-to');
+        const pageUrl = this.getAttribute('data-to');
         router.pushPage(pageUrl, { data: { count: 3 }, animation: 'slide' });
     })
         .on('click', '#btnLogOut', function () {
@@ -115,7 +118,7 @@
         router.resetToPage('./pages/login.html');
     })
         .on('click', '#btnAbout', function (e) {
-        ons.notification.alert('Version: 1.0.0916');
+        router.pushPage('./pages/about.html', { data: {}, animation: 'slide' });
         document.getElementById('popover').hide();
     })
         .on('click', '#imgAgent', function () {
