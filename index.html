@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"
-		/>
-		<title>demo</title>
-		<link rel="stylesheet" href="/sanlinDist/css/onsenui.css?__=158356c" />
-		<link rel="stylesheet" href="/sanlinDist/css/onsen-css-components.min.css?__=2906849" />
-		<link rel="preload" as="font" type="font/woff2" href="/sanlinDist/css/font_awesome/fonts/fa-brands-400.woff2?__=6814d0e" />
-		<link rel="preload" as="font" type="font/woff2" href="/sanlinDist/css/font_awesome/fonts/fa-solid-900.woff2?__=b75b4bf" />
-		<link
-			rel="preload"
-			as="font"
-			type="font/woff2"
-			href="/sanlinDist/css/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2?__=a4d3112"
-		/>
-		<script src="/sanlinDist/lib/onsenui.min.js?__=adeb169"></script>
-		<script>
-			const API_URL = 'http://116.62.34.149:5301/'; //接口的全局变量
 
-			ons.platform.select('ios');
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+	<title>demo</title>
+	<link rel="stylesheet" href="/sanlinDist/css/onsenui.css?__=158356c" />
+	<link rel="stylesheet" href="/sanlinDist/css/onsen-css-components.min.css?__=2906849" />
+	<link rel="preload" as="font" type="font/woff2" href="/sanlinDist/css/font_awesome/fonts/fa-brands-400.woff2?__=6814d0e" />
+	<link rel="preload" as="font" type="font/woff2" href="/sanlinDist/css/font_awesome/fonts/fa-solid-900.woff2?__=b75b4bf" />
+	<link rel="preload" as="font" type="font/woff2"
+		href="/sanlinDist/css/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2?__=a4d3112" />
+	<script src="/sanlinDist/lib/onsenui.min.js?__=adeb169"></script>
+	<script>
+		const API_BASE_URL = 'http://116.62.34.149:5301/'; //接口的全局变量
+
+		ons.platform.select('ios');
+		history.pushState(null, null, document.URL);
+		window.addEventListener('popstate', function () {
 			history.pushState(null, null, document.URL);
-			window.addEventListener('popstate', function() {
-				history.pushState(null, null, document.URL);
-			});
-		</script>
-		<style >html, body { font-size: 20px; height: 100%; }
+		});
+	</script>
+	<style >html, body { font-size: 20px; height: 100%; }
 
 ul { padding-left: 0; }
 
@@ -104,39 +99,50 @@ ons-back-button .back-button__label { font-size: 14px; }
 .list.abnormal * { color: #ffffff; }
 
 /*# sourceMappingURL=app.css.map?__=md5 */</style>
-	</head>
-	<body>
-		<ons-navigator id="appNavigator"></ons-navigator>
+</head>
 
-		<script src="/sanlinDist/lib/jquery-3.4.1.min.js?__=a6b6350"></script>
-		<script src="/sanlinDist/lib/picker.min.js?__=481b2e6"></script>
-		<script src="/sanlinDist/lib/utils.js?__=30605fa"></script>
-		<script>
-			// ons.OnsNavigatorElement;
-			let router = document.getElementById('appNavigator');
-			let currentUser = {} ;
+<body>
+	<ons-navigator id="appNavigator"></ons-navigator>
 
-			ons.ready(function() {
-				let user = Store.get('authorization');
-				if (user) {
-					currentUser.userId = user.userId;
-					currentUser.userName = user.userName;
-					currentUser.loginName = user.loginName;
+	<ons-modal id="mdLoading" direction="up">
+		<div style="text-align: center">
+			<p>
+				<ons-icon icon="md-spinner" size="28px" spin></ons-icon> Loading...
+			</p>
+		</div>
+	</ons-modal>
 
-					router.resetToPage('./pages/home.html');
-				} 
-				else {
-					router.resetToPage('./pages/login.html');
+	<script src="/sanlinDist/lib/jquery-3.4.1.min.js?__=a6b6350"></script>
+	<script src="/sanlinDist/lib/picker.min.js?__=481b2e6"></script>
+	<script src="/sanlinDist/lib/utils.js?__=cd586c3"></script>
+	<script>
+		// ons.OnsNavigatorElement;
+		const router = document.getElementById('appNavigator');
+		const currentUser = {};
 
-					// optimize speed
-					ons.preload('./pages/home.html');
-				}
+		ons.ready(function () {
+			let user = Store.get('authorization');
+			if (user) {
+				currentUser.userId = user.userId;
+				currentUser.userName = user.userName;
+				currentUser.loginName = user.loginName;
+				currentUser.sim = user.sim;
+
+				router.resetToPage('./pages/home.html');
+			}
+			else {
+				router.resetToPage('./pages/login.html');
+
+				// optimize speed
+				ons.preload('./pages/home.html');
+			}
 
 
-				/* document.addEventListener('init', function(event) {
-					console.log('This is a lifecycle event!', event.target);
-				}); */
-			});
-		</script>
-	</body>
+			/* document.addEventListener('init', function(event) {
+				console.log('This is a lifecycle event!', event.target);
+			}); */
+		});
+	</script>
+</body>
+
 </html>
