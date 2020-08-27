@@ -2,4 +2,4 @@
 
 Mitsubishi Electric mobile app
 
-onesen-ui ,typescript, jquery
+onsen ui ,typescript, jquery
