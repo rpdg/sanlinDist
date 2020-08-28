@@ -2,7 +2,7 @@
 	
 <style>
 	.page__content {
-		background-image: url('/sanlinDist/img/bg.jpg?__=9eaed83') !important;
+		background-image: url('/sanlinDist/img/bg.jpg?__=md5') !important;
 		background-size: 100% 100% !important;
 		background-attachment: fixed !important;
 	}
@@ -19,7 +19,6 @@
 		position: relative;
 		display: inline-block;
 	}
-
 	.clearable input {
 		color: #1f1f21;
 		padding-right: 24px;
@@ -36,7 +35,6 @@
 		border-width: 2px;
 		padding: 0 5px;
 	}
-
 	.clearable input:focus {
 		border-color: #e01c34;
 	}
@@ -52,7 +50,7 @@
 		color: #e01c34;
 	}
 
-	.clearable input:focus>.input_icon {
+	.clearable input:focus > .input_icon {
 		color: #e01c34;
 	}
 
@@ -82,78 +80,50 @@
 	<p>
 		<span class="clearable">
 			<ons-icon icon="fa-user" class="input_icon" fixed-width="true"></ons-icon>
-			<input type="text" id="username" value="MASPTQL" placeholder="用户名" />
-			<ons-icon class="clearable__clear" icon="fa-times-circle" style="color: #bbb;" fixed-width="true">
-			</ons-icon>
+			<input type="text" id="username" value="" placeholder="用户名" />
+			<ons-icon
+				class="clearable__clear"
+				icon="fa-times-circle"
+				style="color: #bbb;"
+				fixed-width="true"
+			></ons-icon>
 		</span>
 	</p>
 
 	<p>
 		<span class="clearable">
 			<ons-icon icon="fa-lock" class="input_icon" fixed-width="true"></ons-icon>
-			<input type="password" id="password" value="1" placeholder="密码" />
-			<ons-icon class="clearable__clear" icon="fa-times-circle" style="color: #bbb;" fixed-width="true">
-			</ons-icon>
+			<input type="password" id="password" value="" placeholder="密码" />
+			<ons-icon
+				class="clearable__clear"
+				icon="fa-times-circle"
+				style="color: #bbb;"
+				fixed-width="true"
+			></ons-icon>
 		</span>
 	</p>
 
-	<ons-button id="btnLogin" modifier="large">登 录</ons-button>
+	<ons-button id="btnLogin" modifier="large" ripple>登 录</ons-button>
 </div>
 
 <style>
-	#my-alert-dialog .page__content {
-		overflow-y: scroll !important;
-		background: #fff !important;
-	}
-
-	#my-alert-dialog .boxIcon {
-		color: #bbb;
-		font-size: 14px;
-		margin: auto 0.5em 0 0;
-	}
-
-	#my-alert-dialog ons-list-item.checked>.right::after {
-		content: "\f00c";
-		font-family: 'Font Awesome 5 Brands', 'Font Awesome 5 Free';
-		font-size: 14px;
-		font-weight: 900;
-		color: #ed1b24;
-	}
-
-	.btmButton {
-		width: 30vw;
-		text-align: center;
-		border-radius: 0;
-		line-height: 1.5;
-	}
+#my-alert-dialog .page__content{
+	overflow-y: scroll !important;
+	background: #fff !important;
+}
+#my-alert-dialog .boxIcon{
+	color: #bbb; 
+	font-size:14px;
+	margin: auto 0.5em 0 0;
+}
+#my-alert-dialog ons-list-item.checked > .right::after{
+	content: "\f00c";
+	font-family: 'Font Awesome 5 Brands', 'Font Awesome 5 Free';
+	font-size:14px;
+	font-weight: 900;
+	color: #ed1b24;
+}
 </style>
-
-
-<template id="confirm-dialog.html">
-	<ons-dialog id="my-alert-dialog">
-		<ons-page>
-			<ons-toolbar style=" background-color: #ed1b24 ; color: #fff;">
-				<div class="center" style="color: #fff;">请选择账号</div>
-				<div class="right">
-					<ons-icon id="icoClose" class="mr-10" icon="fa-close"></ons-icon>
-				</div>
-			</ons-toolbar>
-			<div style="overflow-y:scroll;">
-				<ons-list id="MUserName">
-
-				</ons-list>
-			</div>
-
-			<ons-bottom-toolbar style="padding: 5px 20px; display: flex;">
-				<ons-button class="btmButton" modifier="outline" ripple>取消</ons-button>
-				<ons-button id="simu1" class="btmButton" ripple>确认</ons-button>
-			</ons-bottom-toolbar>
-		</ons-page>
-	</ons-dialog>
-
-</template>
-
-
 <template id="alert-dialog.html">
 	<ons-dialog id="my-alert-dialog">
 		<ons-page>
@@ -164,41 +134,59 @@
 				</div>
 			</ons-toolbar>
 			<div style="overflow-y:scroll;">
-				<ons-list id="MAgentName">
-
+				<ons-list>
+					<ons-list-item modifier="longdivider" tappable>
+						<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
+						<span class="font-14">MASPSTO -1</span>
+						<div class="right checked"></div>
+					</ons-list-item>
+					<ons-list-item modifier="longdivider" tappable>
+						<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
+						<span class="font-14">MASPSTO -2</span>
+						<div class="right"></div>
+					</ons-list-item>
+					<ons-list-item modifier="longdivider" tappable>
+						<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
+						<span class="font-14">MASPSTO -3</span>
+						<div class="right"></div>
+					</ons-list-item>
+					<ons-list-item modifier="longdivider" tappable>
+						<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
+						<span class="font-14">MASPSTO -4</span>
+						<div class="right"></div>
+					</ons-list-item>
+					<ons-list-item modifier="longdivider" tappable>
+						<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
+						<span class="font-14">MASPSTO -5</span>
+						<div class="right"></div>
+					</ons-list-item>
+					<ons-list-item modifier="longdivider" tappable>
+						<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
+						<span class="font-14">MASPSTO -6</span>
+						<div class="right"></div>
+					</ons-list-item>
 				</ons-list>
 			</div>
 
 			<ons-bottom-toolbar style="padding: 5px 20px;">
-				<ons-button id="btnAgentnoConfirm" modifier="large" style="line-height: 26px;" ripple>确认</ons-button>
+				<ons-button id="btnCheckAgent" modifier="large" style="line-height: 26px;" ripple>确认</ons-button>
 			</ons-bottom-toolbar>
-
-
+			
+			
 		</ons-page>
 	</ons-dialog>
 </template>
 
 
-    <script>var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-ons.getScriptPage().onDestroy = function () {
+    <script>ons.getScriptPage().onDestroy = function () {
     $('.clearable').each(function () {
-        let $inp = $(this).find('input');
-        let $cle = $(this).find('.clearable__clear');
+        let $inp = $(this).find('input'), $cle = $(this).find('.clearable__clear');
         $inp.off('input blur focus');
         $cle.off('touchstart click');
     });
     $('#btnLogin').off('click');
 };
 ons.getScriptPage().onInit = function () {
-    api.clearToken();
     $('.clearable').each(function () {
         let $ipt = $(this).find('input'), $clearSignal = $(this).find('.clearable__clear');
         $ipt.on('input', function () {
@@ -217,181 +205,73 @@ ons.getScriptPage().onInit = function () {
             $ipt.val('').trigger('input');
         });
     });
-    function enterSys(user) {
-        currentUser.userId = user.userId;
-        currentUser.userName = user.userName;
-        currentUser.loginName = user.loginName;
-        currentUser.sim = user.sim;
-        Store.set('authorization', currentUser);
-        router.resetToPage('./pages/home.html', { animation: 'fade' });
-    }
-    function search_TraceInfoUser(curUser) {
-        return __awaiter(this, void 0, void 0, function* () {
-            let json = yield api.post('/Role/INTECK_USERSLIST');
-            let userList = json.rows;
-            let dialog = (yield ons.createDialog('confirm-dialog.html'));
-            dialog.show();
-            $('.dialog-container', dialog).css({ height: '350px' });
-            $('#icoClose,.btmButton', dialog).one('click', function () {
-                return __awaiter(this, void 0, void 0, function* () {
-                    if (this.id === 'simu1') {
-                        let json = yield api.post('/UserLogin/simulationLogin', {
-                            username: $('.checked', dialog).data('no')
-                        });
-                        if (json.data_token && json.data_token.length) {
-                            api.setToken(json.data_token[0].TOKENCODE);
-                            Store.remove('lastLoginTime');
-                            let user = {
-                                userId: json.data[0].ROLEDETAILID.split(',')[0],
-                                userName: json.data[0].USERNAME,
-                                loginName: json.data[0].LOGINNAME,
-                                sim: true
-                            };
-                            if (json.data_AgentMore && json.data_AgentMore.length) {
-                                search_Agent(json.data_AgentMore, user);
-                            }
-                            else {
-                                enterSys(user);
-                            }
-                        }
-                    }
-                    else {
-                        enterSys(curUser);
-                    }
-                    $(dialog).off('click', 'ons-list-item');
-                    dialog.hide();
-                });
-            });
-            $(dialog).on('click', 'ons-list-item', function () {
-                $(this)
-                    .addClass('checked')
-                    .siblings()
-                    .removeClass('checked');
-            });
-            dialog.addEventListener('prehide', () => {
-                $(dialog).off('click');
-                $('#icoClose,.btmButton', dialog).off('click');
-            });
-            let html = '';
-            userList.forEach((user, i) => {
-                html += `
-				<ons-list-item modifier="longdivider" class="${i ? '' : 'checked'}" data-no="${user.LOGINNAME}" tappable>
-					<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
-						<span class="font-14">
-							${user.LOGINNAME} / ${user.USERNAME}
-						</span>
-					<div class="right"></div>
-				</ons-list-item>
-			`;
-            });
-            $('#MUserName', dialog).html(html);
-        });
-    }
-    function search_Agent(agentList, curUser) {
-        return __awaiter(this, void 0, void 0, function* () {
-            let dialog = (yield ons.createDialog('alert-dialog.html'));
-            dialog.show();
-            $('.dialog-container', dialog).css({ height: '350px' });
-            $('#icoClose,#btnAgentnoConfirm', dialog).one('click', function () {
-                return __awaiter(this, void 0, void 0, function* () {
-                    if (this.id === 'btnAgentnoConfirm') {
-                        let agentNo = $('.checked', dialog).data('no');
-                        let json = yield api.post('/UserLogin/AgentnoConfirm', {
-                            AngentNo: agentNo
-                        });
-                        if (json.changecount == '1') {
-                            curUser.loginName = agentNo;
-                            curUser.userName = $('.checked', dialog).data('aname');
-                            enterSys(curUser);
-                        }
-                    }
-                    else {
-                        api.clearToken();
-                    }
-                    $(dialog).off('click', 'ons-list-item');
-                    dialog.hide();
-                });
-            });
-            $(dialog).on('click', 'ons-list-item', function () {
-                $(this)
-                    .addClass('checked')
-                    .siblings()
-                    .removeClass('checked');
-            });
-            dialog.addEventListener('prehide', () => {
-                $(dialog).off('click');
-                $('#icoClose,#btnAgentnoConfirm', dialog).off('click');
-            });
-            let continer = $('#MAgentName', dialog);
-            continer.empty();
-            agentList.forEach((agent, i) => {
-                continer.append(`
-				<ons-list-item modifier="longdivider" class="${i ? '' : 'checked'}" data-no="${agent.AgentNO}" data-aname="${agent.AgentName1}" tappable>
-					<ons-icon icon="fa-user" class="boxIcon" fixed-width="true"></ons-icon>
-						<span class="font-14">
-							${agent.AgentName1}
-							<br>
-							${agent.AgentNO}
-						</span>
-					<div class="right"></div>
-				</ons-list-item>
-			`);
-            });
-        });
-    }
-    const btnLogin = $('#btnLogin').on('click', function () {
-        return __awaiter(this, void 0, void 0, function* () {
-            let username = document.querySelector('#username').value;
-            let password = document.querySelector('#password').value;
-            if (!username) {
-                os.alert('请输入用户账号');
-            }
-            else if (!password) {
-                os.alert('请输入用户密码');
-            }
-            else {
-                btnLogin.prop('disabled', true);
-                try {
-                    let json = yield api.post('/UserLogin/Login', {
-                        username: username.toUpperCase(),
-                        password
-                    });
-                    console.log(json);
-                    if (json.data_token && json.data_token.length) {
-                        api.setToken(json.data_token[0].TOKENCODE);
-                        Store.remove('lastLoginTime');
-                        let adminFlag = false;
-                        let roles = json.data[0].ROLEDETAILID.split(',');
-                        let user = {
-                            userId: roles[0],
-                            userName: json.data[0].USERNAME,
-                            loginName: json.data[0].LOGINNAME,
-                            sim: false
-                        };
-                        for (var i = 0; i < roles.length; i++) {
-                            if (roles[i] == '0dec79b7-63be-407a-85ea-4088fc11887a') {
-                                adminFlag = true;
-                                search_TraceInfoUser(user);
-                                break;
-                            }
-                        }
-                        if (!adminFlag) {
-                            if (json.data_AgentMore && json.data_AgentMore.length) {
-                                search_Agent(json.data_AgentMore, user);
-                            }
-                            else {
-                                enterSys(user);
-                            }
-                        }
-                    }
-                    else {
-                    }
-                }
-                finally {
-                    btnLogin.prop('disabled', false);
-                }
-            }
-        });
+    const DEMO_USERS = {
+        VBSOL02: {
+            userName: '陆萍',
+            loginName: 'VBSOL02',
+        },
+        VBSOL01: {
+            userName: '倪宏锋',
+            loginName: 'VBSOL01',
+        },
+        MASPTQL: {
+            userName: '唐琪琳',
+            loginName: 'MASPTQL',
+        },
+        MASPWJJ: {
+            userName: '吴佳军',
+            loginName: 'MASPWJJ',
+        },
+        BABPZNJ: {
+            userName: '张俭',
+            loginName: 'BABPZNJ',
+        },
+        MASPLKY: {
+            userName: '黎凯燕',
+            loginName: 'MASPLKY',
+        },
+        BABPZHQ: {
+            userName: '郑海青',
+            loginName: 'BABPZHQ',
+        },
+        MASPWGU: {
+            userName: '王光',
+            loginName: 'MASPWGU',
+        },
+        MASPCCY: {
+            userName: '崔彩云',
+            loginName: 'MASPCCY',
+        },
+        MASPAT: {
+            userName: '浅井哲彦',
+            loginName: 'MASPAT',
+        },
+        MASPLJI: {
+            userName: '刘洁',
+            loginName: 'MASPLJI',
+        },
+        RISPZW: {
+            userName: '张巍',
+            loginName: 'RISPZW',
+        },
+        MASPWJ: {
+            userName: '王坚',
+            loginName: 'MASPWJ',
+        },
+    };
+    $('#btnLogin').on('click', function () {
+        const username = document.querySelector('#username').value.toUpperCase();
+        const password = document.querySelector('#password').value;
+        if (username in DEMO_USERS && password == '1') {
+            currentUser.userName = DEMO_USERS[username].userName;
+            currentUser.loginName = username;
+            currentUser.userId = 123456;
+            Store.set('authorization', currentUser);
+            router.resetToPage('./pages/home.html', { animation: 'fade' });
+        }
+        else {
+            ons.notification.alert('Wrong username/password combination');
+        }
     });
 };
 </script><!--ignore-->
